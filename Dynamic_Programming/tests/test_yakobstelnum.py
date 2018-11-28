@@ -1,9 +1,8 @@
-"""
-looking for number value in yakobstel sequence."""
+"""looking for number value in yakobstel sequence"""
 
-
-from yakobstelnum import yakobstelelement
 import pytest
+from yakobstelnum import yakobstelelement
+
 
 
 def test_func():
@@ -13,13 +12,13 @@ def test_func():
 
 def test_error():
     """exception."""
-    pytest.raises(TypeError, "yakobstelelement('wrong_value')")
+    pytest.raises(NameError, "yakobstelelement(sdfsdf)")
 
 
-@pytest.mark.xfail(raises=RecursionError)
+@pytest.mark.xfail(raises=TypeError)
 def test_fail():
     """fail ?"""
-    yakobstelelement(-1)
+    yakobstelelement('qwerty')
 
 
 @pytest.mark.parametrize("yakobstelel_num, yakobstel_val", [(1, 1), (2, 1), (5, 11), (7, 43), (9, 171)])
