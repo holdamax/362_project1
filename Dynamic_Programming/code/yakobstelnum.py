@@ -1,6 +1,6 @@
 """"count yacobstel numbers"""
-def yakobstelelement (n_j):
+def yakobstelelement (num):
 
-    return(2**n_j-(-1)**n_j)/3
+    return(2**num-(-1)**num)/3
 
 print (yakobstelelement(6))
