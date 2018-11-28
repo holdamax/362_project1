@@ -1,5 +1,5 @@
 """Python3 implementation to count
-ways to sum up to a given value N"""
+ways to sum up to a given value number"""
 def descr():
     """Function for to input and verification data"""
     try:
