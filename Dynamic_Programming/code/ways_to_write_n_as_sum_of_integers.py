@@ -24,6 +24,9 @@ def count_ways(number: int):
 
 
 def descr(number):
+    """
+    function created for input and to call main function
+    """
     try:
         print(count_ways(int(number)))
     except TypeError:
@@ -31,8 +34,5 @@ def descr(number):
     except ValueError:
         print('Please enter positive integer > 0')
 
+
 descr(input('Please enter a number (e.g. 40):'))
-
-
-
-

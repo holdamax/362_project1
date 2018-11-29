@@ -43,6 +43,9 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
 
 
 def descr(posts, colors):
+    """
+        function created for input and to call main function
+    """
     try:
         print(ways_to_paint_fence(int(posts), int(colors)))
     except TypeError:
@@ -51,4 +54,5 @@ def descr(posts, colors):
         print('Please enter positive integer > 0')
 
 
-descr(input('Please enter a number of posts (e.g. 40):'), input('Please enter a number of colors (e.g. 40):'))
+descr(input('Please enter a number of posts (e.g. 40):'),
+      input('Please enter a number of colors (e.g. 40):'))
