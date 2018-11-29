@@ -13,11 +13,11 @@ def descr():
     except:
         print('Error! Please, enter correct size (etc. 2 and 3)')
 
-def find_combinations(post, color):
+def find_combinations(post: int , color: int):
     """
-    :param post int:
-    :param color int:
-    :return:
+    param post int: number of posts in fence
+    param color int: number of colors for painting
+    return: number of ways for painting the fence
     """
     same = color
     diff = same * (color - 1)
