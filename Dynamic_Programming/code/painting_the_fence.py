@@ -5,8 +5,6 @@ the fence with some number of posts
 such that at most 2 adjacent posts have the same color
 """
 
-print('Please enter (number of posts, number of colors) (e.g. (10,3))')
-
 
 def ways_to_paint_fence(number_posts: int, number_colors: int):
     """
@@ -40,5 +38,17 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
             diff = (same + diff) * (number_colors - 1)
             same = prev_diff
         return same + diff
-    else:
-        return 'Please enter data like (posts, colors). E.g. (5,2)'
+
+    return 'Please enter data like (posts, colors). E.g. (5,2)'
+
+
+def descr(posts, colors):
+    try:
+        print(ways_to_paint_fence(int(posts), int(colors)))
+    except TypeError:
+        print('Please enter positive integer > 0')
+    except ValueError:
+        print('Please enter positive integer > 0')
+
+
+descr(input('Please enter a number of posts (e.g. 40):'), input('Please enter a number of colors (e.g. 40):'))
