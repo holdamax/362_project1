@@ -8,6 +8,20 @@ If the n-th person is paired up with any of the remaining (n-1) person, then, we
 """
 
 
+def descr():
+    """Entry point function for the menu app."""
+    while True:
+        choice = input(
+            '>>> Please enter integer positive number of friends or X, if you want to exit: ')
+        choice = choice.lower()
+
+        if choice == 'x':
+            print('Bye')
+            break
+        else:
+            itr(choice)
+
+
 def itr(n: str):
     """Count all possible pairings.
 
@@ -42,20 +56,6 @@ def itr(n: str):
     else:
         print("You gave wrong input. Try again.\n")
         return None
-
-
-def descr():
-    """Entry point function for the menu app."""
-    while True:
-        choice = input(
-            '>>> Please enter integer positive number of friends or X, if you want to exit: ')
-        choice = choice.lower()
-
-        if choice == 'x':
-            print('Bye')
-            break
-        else:
-            itr(choice)
 
 
 if __name__ == '__main__':
