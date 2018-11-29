@@ -23,7 +23,7 @@ def itr(n):
         total number of ways in which friends can remain single or can be paired up.
 
     """
-    if n.isdigit() and int(n) >= 0:
+    if n.isdigit():
         n = int(n)
         if n == 0:
             fn = 0
@@ -48,6 +48,7 @@ if __name__ == '__main__':
     while True:
         choice = input(
             '>>> Please enter integer positive number of friends or X, if you want to exit: ')
+        choice = choice.lower()
 
         if choice == 'x':
             print('Bye')
