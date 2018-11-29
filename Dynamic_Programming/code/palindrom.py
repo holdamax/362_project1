@@ -34,5 +34,3 @@ def longest_pal(str):
                 Opt[i][j] = max(Opt[i][j - 1], Opt[i + 1][j])
 
     return Opt[0][n - 1]
-
-print(longest_pal('banana'))
