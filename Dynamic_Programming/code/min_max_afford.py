@@ -7,11 +7,10 @@ def descr():
     try:
         print("Please input number of days and two lists of affords: ")
         days_in = input("Number of days: ")
-        low_in = []
-        high_in = []
-        for i in range(int(days_in)):
-            low_in.append(int(input("Low afford " + str(i + 1) + ": ")))
-            high_in.append(int(input("High afford " + str(i + 1) + ": ")))
+        low_in = input("Low afford: ")
+        low_in = [int(i) for i in low_in.split(",")]
+        high_in = input("High afford: ")
+        high_in = [int(i) for i in high_in.split(",")]
         return max_afford(low_in, high_in, int(days_in))
     except:
         print("Wrong inputs. Input only positive integer numbers.")

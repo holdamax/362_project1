@@ -15,8 +15,6 @@ def descr():
 def fibo(size):
     """Calculate Modified Fibonacci number."""
 
-    if size < 1:
-        raise TypeError
     if size in (1, 2, 3):
         return 1
     return fibo(size-1) + fibo(size-3)
