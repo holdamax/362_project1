@@ -4,6 +4,14 @@ the fence such that at most 2 adjacent posts have the same color.
 Input: Both n and k are positive integers.
 Please write first argument - number of posts, second argumet - number of colors!
 """
+def descr():
+    """Function for to input and verification data"""
+    try:
+        posts = int(input('Please, input number of posts: '))
+        colors = int(input('Please, input number of colors: '))
+        return find_combinations(posts, colors)
+    except:
+        print('Error! Please, enter correct size (etc. 2 and 3)')
 
 def find_combinations(post, color):
     """
@@ -11,27 +19,21 @@ def find_combinations(post, color):
     :param color int:
     :return:
     """
+    same = color
+    diff = same * (color - 1)
     i = 3
-    if post <= 0:
-        ans = 0
-    elif post in range(1, 3):
-        ans = color ** post
+    if post and color <= 0:
+        raise TypeError('Bad param!')
+    elif post in range(1, i):
+        return color ** post
     elif i <= post:
-        same = color
-        diff = same * (color - 1)
-        for i in range(i, post + 1):
+
+        for _ in range(i, post + 1):
             prdiff = diff
             diff = (same + diff) * (color - 1)
             same = prdiff * 1
-        ans = same + diff
-    if color > 0:
-        pass
-    else:
-        ans = 0
-    if ans == 0:
-        raise TypeError('Bad param!')
-    else:
-        return ans
+    return same + diff
+
 if __name__ == "__main__":
     C = int(input('How much colors you have? '))
     N = int(input('How much posts you have? '))
