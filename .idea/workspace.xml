@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0914709-bb2f-4363-bd8f-57eb35e9ca3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Dynamic_Programming/code/fibonacci_mod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamic_Programming/code/friend_pairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dynamic_Programming/code/friend_pairs.py" afterDir="false" />
-    </list>
+    <list default="true" id="e0914709-bb2f-4363-bd8f-57eb35e9ca3a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +160,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1554" height="916" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49936143" visible="true" weight="0.14379947" />
       <window_info id="Structure" order="1" sideWeight="0.50063854" side_tool="true" weight="0.17941953" />
