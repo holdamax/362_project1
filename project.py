@@ -1,8 +1,10 @@
 """Main project module"""
 import fibonacci_mod
 import min_max_afford
+import friend_pairs
+import longest_sequence
 
-TASKS = {'2': fibonacci_mod, '9': min_max_afford}
+TASKS = {'2': fibonacci_mod, '': longest_sequence, '9': min_max_afford, '11': friend_pairs}
 print("Choose task: \n"
       "1:  Fibonacci\n"
       "2:  Modified fibonacci\n"
