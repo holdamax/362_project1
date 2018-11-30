@@ -33,12 +33,3 @@ def find_combinations(post: int , color: int):
             same = prdiff
     return same + diff
 
-#print (descr())
-
-if __name__ == "__main__":
-    C = int(input('How much colors you have? '))
-    N = int(input('How much posts you have? '))
-    if find_combinations(N, C) == 0:
-        print("Okay, Houston, we've had a problem here")
-    else:
-        print('You have %s ways of painting the fence.' %(find_combinations(N, C)))
