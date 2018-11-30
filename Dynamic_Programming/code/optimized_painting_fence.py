@@ -38,4 +38,3 @@ def find_combinations(post, color):
         return same + diff
     except (TypeError, ValueError):
         print('Error! Please, enter correct size (etc. 2 and 3)')
-print(descr())
