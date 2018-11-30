@@ -30,7 +30,7 @@ def find_combinations(post: int , color: int):
         for _ in range(i, post + 1):
             prdiff = diff
             diff = (same + diff) * (color - 1)
-            same = prdiff * 1
+            same = prdiff
     return same + diff
 
 #print (descr())
