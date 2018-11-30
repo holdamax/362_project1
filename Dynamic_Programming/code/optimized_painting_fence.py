@@ -6,30 +6,36 @@ Please write first argument - number of posts, second argumet - number of colors
 """
 def descr():
     """Function for to input and verification data"""
-    try:
-        posts = int(input('Please, input number of posts: '))
-        colors = int(input('Please, input number of colors: '))
-        return find_combinations(posts, colors)
-    except:
-        print('Error! Please, enter correct size (etc. 2 and 3)')
+    posts = input('Please, input number of posts: ')
+    if posts == 'q':
+        return 'q'
+    colors = input('Please, input number of colors: ')
+    if colors == 'q':
+        return 'q'
+    return find_combinations(posts, colors)
 
-def find_combinations(post: int , color: int):
+def find_combinations(post, color):
     """
     param post int: number of posts in fence
     param color int: number of colors for painting
     return: number of ways for painting the fence
     """
-    same = color
-    diff = same * (color - 1)
-    i = 3
-    if post and color <= 0:
-        raise TypeError('Bad param!')
-    elif post in range(1, i):
-        return color ** post
-    elif i <= post:
-        for _ in range(i, post + 1):
-            prdiff = diff
-            diff = (same + diff) * (color - 1)
-            same = prdiff
-    return same + diff
 
+    try:
+        post, color = (int(post), int(color))
+        same = color
+        diff = same * (color - 1)
+        i = 3
+
+        if post <= 0 or color <= 0:
+            raise TypeError
+        if post in range(1, i):
+            return color ** post
+        if i <= post:
+            for _ in range(i, post + 1):
+                prdiff = diff
+                diff = (same + diff) * (color - 1)
+                same = prdiff
+        return same + diff
+    except (TypeError, ValueError):
+        print('Error! Please, enter correct size (etc. 2 and 3)')

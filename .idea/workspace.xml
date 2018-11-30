@@ -26,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dynamic_Programming/code/friend_pairs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="34">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#22#368#1" />
                 <element signature="e#386#765#1" />
@@ -36,22 +36,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dynamic_Programming/code/optimized_painting_fence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            <state relative-caret-position="107">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dynamic_Programming/tests/test_optimized_painting_fence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="442">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#25#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,45 +78,45 @@
     <option name="height" value="907" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="362_project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="362_project1" type="462c0819:PsiDirectoryNode" />
+              <item name="362_project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="362_project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="362_project1" type="462c0819:PsiDirectoryNode" />
-              <item name="Dynamic_Programming" type="462c0819:PsiDirectoryNode" />
+              <item name="362_project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Dynamic_Programming" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="362_project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="362_project1" type="462c0819:PsiDirectoryNode" />
-              <item name="Dynamic_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="362_project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Dynamic_Programming" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="362_project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="362_project1" type="462c0819:PsiDirectoryNode" />
-              <item name="Dynamic_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="362_project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Dynamic_Programming" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,17 +153,17 @@
       <method v="2" />
     </configuration>
     <configuration name="optimized_painting_fence" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="362_project1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\sakhno\PycharmProjects\untitled\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dynamic_Programming/code" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dynamic_Programming/code/optimized_painting_fence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -203,24 +203,30 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_optimized_painting_fence.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="362_project1" />
+    <configuration name="pytest in test_optimized_painting_fence.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\sakhno\PycharmProjects\untitled\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dynamic_Programming/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/Dynamic_Programming/tests/test_optimized_painting_fence.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.friend_pairs" />
+      <item itemvalue="Python.optimized_painting_fence" />
+      <item itemvalue="Python tests.pytest in test_optimized_painting_fence.py" />
+      <item itemvalue="Python tests.pytest for test_optimized_painting_fence.test_f_func" />
+      <item itemvalue="Python tests.pytest for test_optimized_painting_fence.test_fail" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_optimized_painting_fence.py" />
         <item itemvalue="Python.optimized_painting_fence" />
         <item itemvalue="Python tests.pytest for test_optimized_painting_fence.test_f_func" />
         <item itemvalue="Python tests.pytest for test_optimized_painting_fence.test_fail" />
@@ -242,53 +248,52 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 00m 39s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 23m 09s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 28m 54s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 27m 49s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_optimized_painting_fence_test_f_func - 2018.11.30 at 12h 32m 47s.xml">
-      <configuration name="pytest for test_optimized_painting_fence.test_f_func" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 33m 11s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 29m 14s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_optimized_painting_fence_test_f_func - 2018.11.30 at 12h 34m 09s.xml">
-      <configuration name="pytest for test_optimized_painting_fence.test_f_func" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_optimized_painting_fence_test_f_func - 2018.11.30 at 12h 34m 49s.xml">
-      <configuration name="pytest for test_optimized_painting_fence.test_f_func" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 36m 11s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 29m 32s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 40m 02s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 30m 45s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 40m 56s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 33m 02s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 12h 41m 19s.xml">
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 37m 44s.xml">
+      <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 40m 41s.xml">
+      <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 18h 46m 38s.xml">
+      <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_optimized_painting_fence_py - 2018.11.30 at 19h 08m 22s.xml">
       <configuration name="pytest in test_optimized_painting_fence.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49936143" visible="true" weight="0.14330874" />
       <window_info id="Structure" order="1" sideWeight="0.50063854" side_tool="true" weight="0.17941953" />
       <window_info id="Favorites" order="2" sideWeight="0.50063854" side_tool="true" weight="0.17941953" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39869988" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39869988" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32950193" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2611051" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2611051" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32950193" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32719395" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32950193" />
@@ -298,6 +303,17 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/code.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_pytest_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dynamic_Programming/code/longest_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -307,8 +323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dynamic_Programming/code/friend_pairs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#22#368#1" />
             <element signature="e#386#765#1" />
@@ -316,23 +332,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/code.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dynamic_Programming/tests/test_optimized_painting_fence.py">
+    <entry file="file://$PROJECT_DIR$/Dynamic_Programming/code/optimized_painting_fence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="107">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dynamic_Programming/code/optimized_painting_fence.py">
+    <entry file="file://$PROJECT_DIR$/Dynamic_Programming/tests/test_optimized_painting_fence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

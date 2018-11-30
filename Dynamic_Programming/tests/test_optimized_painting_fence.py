@@ -19,3 +19,10 @@ def test_p_func(number_of_posts, number_of_colors, value):
     """Test of calculating number of ways of painting the fence with different inputs."""
     assert opt.find_combinations(number_of_posts, number_of_colors) == value
 
+@pytest.mark.parametrize("number_of_posts, number_of_colors, value", [('a', '4', None),
+                                                                      ('0', '2', None),
+                                                                      ('3', '0', None),
+                                                                      ('-4', '5', None)])
+def test_f_func(number_of_posts, number_of_colors, value):
+    """Test of calculating number of ways of painting the fence with different inputs."""
+    assert opt.find_combinations(number_of_posts, number_of_colors) == value
