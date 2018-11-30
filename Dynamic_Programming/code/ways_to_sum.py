@@ -1,5 +1,7 @@
 """Python3 implementation to count
 ways to sum up to a given value number"""
+
+
 def descr():
     """Function for to input and verification data"""
     try:
@@ -9,8 +11,11 @@ def descr():
         my_list = [int(i) for i in my_list.split(',')]
         number = int(input('Please, input the number which has to be represented: '))
         return ways_to_sum(my_list, number)
-    except:
+    except TypeError:
         print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+    except ValueError:
+        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+
 
 def ways_to_sum(my_list=None, number=None):
     """ Function to count the total
