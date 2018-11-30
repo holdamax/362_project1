@@ -10,7 +10,7 @@ TASKS = {'1': fibonacci,
 print("Choose task: \n"
       "1:  Fibonacci\n"
       "2:  Modified fibonacci\n"
-      "3:  Intresting row\n"
+      "3:  Interesting row\n"
       "4:  Longest subsequence with difference one\n"
       "5:  Ways to sum to N using array elements with repetition\n"
       "6:  Ways to write n as sum of two or more positive integers\n"
