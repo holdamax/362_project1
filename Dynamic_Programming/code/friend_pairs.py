@@ -17,7 +17,7 @@ def descr():
 
         if choice == 'q':
             print('Bye\n')
-            return 'q'
+            return choice
 
         itr(choice)
 
@@ -30,7 +30,7 @@ def itr(n: str):
 
     Parameters
     ----------
-    n : number of friends
+    n : str     number of friends
 
     Returns
     -------
