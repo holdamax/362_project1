@@ -52,7 +52,7 @@ def descr():
     inpt = input('\nPlease enter positive even number'
                  ' even and integer...\n'
                  'Or \'q\' to back to the menu ... ')
-    if isinstance(inpt, str) and inpt.lower() == 'q':
+    if inpt.lower() == 'q':
         return 'q'
     result = paths_without_crossing(inpt)
     print(result)
