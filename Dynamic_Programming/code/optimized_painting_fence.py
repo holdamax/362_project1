@@ -27,12 +27,13 @@ def find_combinations(post: int , color: int):
     elif post in range(1, i):
         return color ** post
     elif i <= post:
-
         for _ in range(i, post + 1):
             prdiff = diff
             diff = (same + diff) * (color - 1)
             same = prdiff * 1
     return same + diff
+
+#print (descr())
 
 if __name__ == "__main__":
     C = int(input('How much colors you have? '))
