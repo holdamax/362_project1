@@ -7,15 +7,30 @@ If the n-th person is single, then we recur for (n - 1) friends.
 If the n-th person is paired up with any of the remaining (n-1) person, then, we recur (n-1)*f(n-2).
 """
 
-def itr(n):
+
+def descr():
+    """Entry point function for the menu app."""
+    while True:
+        choice = input(
+            '\n>>> Please enter integer positive number of friends or X, if you want to exit: ')
+        choice = choice.lower()
+
+        if choice == 'q':
+            print('Bye\n')
+            return choice
+
+        itr(choice)
+
+
+def itr(n: str):
     """Count all possible pairings.
 
-    Funtion takes in number of friends and outputs the total number of ways in which friends
+    Function takes in number of friends and outputs the total number of ways in which friends
     can remain single or can be paired up.
 
     Parameters
     ----------
-    n : number of friends
+    n : str     number of friends
 
     Returns
     -------
@@ -26,32 +41,23 @@ def itr(n):
     if n.isdigit():
         n = int(n)
         if n == 0:
-            fn = 0
+            result = 0
         elif n == 1:
-            fn = 1
+            result = 1
         elif n >= 2:
-            fn, f1, f2 = 0, 1, 1
+            result, f_1, f_2 = 0, 1, 1
 
             for i in range(2, n + 1):
-                fn = f1 + (i - 1) * f2
-                f2, f1 = f1, fn
+                result = f_1 + (i - 1) * f_2
+                f_2, f_1 = f_1, result
 
-        print("Number of ways to pair {0} friends is: {1}\n".format(n, fn))
-        return fn
+        print(f"Number of ways to pair {n} friends is: {result}")
+        return result
     else:
-        print("You gave wrong input. Try again.\n")
+        print("You gave wrong input. Try again.")
         return None
 
 
 if __name__ == '__main__':
 
-    while True:
-        choice = input(
-            '>>> Please enter integer positive number of friends or X, if you want to exit: ')
-        choice = choice.lower()
-
-        if choice == 'x':
-            print('Bye')
-            break
-        else:
-            itr(choice)
+    descr()

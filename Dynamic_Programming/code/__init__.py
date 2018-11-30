@@ -1,4 +1,4 @@
-__all__ = ['fibinacci',
+__all__ = ['fibonacci',
            'fibonacci_mod',
            'ways_to_sum',
            'min_max_afford',

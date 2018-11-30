@@ -1,5 +1,7 @@
 """Main project module"""
+
 from Dynamic_Programming.code import *
+
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
          '4': longest_sequence,
