@@ -1,9 +1,11 @@
 """Main project module"""
 from Dynamic_Programming.code import *
+
 TASKS = {'2': fibonacci_mod,
          '5': ways_to_sum,
          '8': paths_without_crossing,
-         '9': min_max_afford}
+         '9': min_max_afford,
+         '14': optimized_painting_fence}
 
 print("Choose task: \n"
       "1:  Fibonacci\n"
