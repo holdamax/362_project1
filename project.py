@@ -1,12 +1,12 @@
 """Main project module"""
-from Dynamic_Programming.code import fibonacci_mod, min_max_afford, ways_to_sum
+from Dynamic_Programming.code import fibonacci_mod, min_max_afford, ways_to_sum, friend_pairs, longest_sequence
 
 
-TASKS = {'2': fibonacci_mod, '5': ways_to_sum, '9': min_max_afford}
+TASKS = {'2': fibonacci_mod, '4': longest_sequence, '5': ways_to_sum, '9': min_max_afford, '11': friend_pairs}
 print("Choose task: \n"
       "1:  Fibonacci\n"
       "2:  Modified fibonacci\n"
-      "3:  Intresting row\n"
+      "3:  Interesting row\n"
       "4:  Longest subsequence with difference one\n"
       "5:  Ways to sum to N using array elements with repetition\n"
       "6:  Ways to write n as sum of two or more positive integers\n"

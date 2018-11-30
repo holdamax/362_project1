@@ -12,7 +12,7 @@ def longestSubseqWithDiffOne(arr, n):
                 # Longest length will be the maximum value of dp array.
     result = 1
     for i in range(n):
-        if (result < dp[i]):
+        if result < dp[i]:
             result = dp[i]
     print(result)
     return result
