@@ -4,6 +4,8 @@ def descr():
     """Function for to input and verification data"""
     try:
         my_list = input('Please, input the array which has to be represented: ')
+        if my_list == 'q':
+            return 'q'
         my_list = [int(i) for i in my_list.split(',')]
         number = int(input('Please, input the number which has to be represented: '))
         return ways_to_sum(my_list, number)
@@ -24,5 +26,5 @@ def ways_to_sum(my_list=None, number=None):
             if i >= my_list[j]:
                 count[i] += count[i - my_list[j]]
 
-    print("Total number of ways = ", end='')
+    print("Total number of ways = {}".format(count[number]))
     return count[number]
