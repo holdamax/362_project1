@@ -192,7 +192,7 @@ argument-naming-style=snake_case
 
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style.
-#argument-rgx=
+argument-rgx=\b[a-z]+(_[a-z]+)*\b
 
 # Naming style matching correct attribute names.
 attr-naming-style=snake_case
@@ -292,7 +292,6 @@ variable-naming-style=snake_case
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style.
 #variable-rgx=
-
 
 [FORMAT]
 
