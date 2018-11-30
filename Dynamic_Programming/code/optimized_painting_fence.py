@@ -7,10 +7,8 @@ Please write first argument - number of posts, second argumet - number of colors
 def descr():
     """Function for to input and verification data"""
     posts = input('Please, input number of posts: ')
-    if posts == 'q':
-        return 'q'
     colors = input('Please, input number of colors: ')
-    if colors == 'q':
+    if posts == 'q' or colors == 'q':
         return 'q'
     return find_combinations(posts, colors)
 
@@ -36,6 +34,8 @@ def find_combinations(post, color):
                 prdiff = diff
                 diff = (same + diff) * (color - 1)
                 same = prdiff
+        print("total number of ways of painting the fence: %s" % (same + diff))
         return same + diff
     except (TypeError, ValueError):
         print('Error! Please, enter correct size (etc. 2 and 3)')
+print(descr())
