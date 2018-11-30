@@ -1,8 +1,11 @@
 """Main project module"""
-import fibonacci_mod
-import min_max_afford
+from Dynamic_Programming.code import fibonacci_mod, min_max_afford, ways_to_sum, paths_without_crossing
 
-TASKS = {'2': fibonacci_mod, '9': min_max_afford}
+
+TASKS = {'2': fibonacci_mod,
+         '5': ways_to_sum,
+         '8': paths_without_crossing,
+         '9': min_max_afford}
 print("Choose task: \n"
       "1:  Fibonacci\n"
       "2:  Modified fibonacci\n"
@@ -26,8 +29,7 @@ while True:
     try:
         while True:
             RESULT = TASKS[TASK_N].descr()
-            print(RESULT)
-            if RESULT is not None:
+            if RESULT == 'q' or RESULT is not None:
                 break
 
     except KeyError:

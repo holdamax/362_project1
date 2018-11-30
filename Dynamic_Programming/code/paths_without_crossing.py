@@ -25,7 +25,7 @@ def _factorial(num):
     return number
 
 
-def _paths_without_crossing(num):
+def paths_without_crossing(num):
     """Counts numbers of ways to connect num points on a circle
     : Parameters
     ----------
@@ -35,8 +35,11 @@ def _paths_without_crossing(num):
     f(n) = num! / ((num/2)! * (num/2)!)
         total number of ways to connect num points on a circle without crossing.
     """
-    return round(_factorial(num) / (_factorial((num / 2 + 1)) * _factorial(num / 2)))
-
+    if num.isdigit():
+        num = int(num)
+        if not (num % 2) and num >= 2:
+            return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
+    print('You entered wrond value')
 
 
 
@@ -45,22 +48,15 @@ def descr():
     Calls paths_without_crossing function and check type
     :Returns:
 
-
     """
-    while True:
-
-        try:
-            inpt = input('Please enter number in range from 2 to 1038, positive,'
-                         ' even and integer...\n'
-                         'Or \'q\' to back to the menu'
-                         'WARNING!!! Do not enter value BIGGER then 1038, please\n')
-            if isinstance(inpt, str) and inpt.lower() == 'q':
-                return 'q'
-            number = int(inpt)
-            if number != 0 and (not (number % 2) and number <= 1038 and number >= 2):
-                return _paths_without_crossing(number)
-        except(TypeError, ValueError):
-            print('You used wrong value')
+    inpt = input('\nPlease enter positive even number'
+                 ' even and integer...\n'
+                 'Or \'q\' to back to the menu ... ')
+    if isinstance(inpt, str) and inpt.lower() == 'q':
+        return 'q'
+    result = paths_without_crossing(inpt)
+    print(result)
+    return result
 
 if __name__ == '__main__':
-    print(descr())
+   descr()
