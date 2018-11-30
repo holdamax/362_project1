@@ -3,9 +3,9 @@ ways to sum up to a given value number"""
 def descr():
     """Function for to input and verification data"""
     my_list = input('Please, input the array which has to be represented (etc. 1,5,6): ')
-    if my_list == 'q':
-        return 'q'
     number = input('Please, input the number which has to be represented (etc. 7): ')
+    if my_list == 'q' or number == 'q':
+        return 'q'
     return ways_to_sum(my_list, number)
 
 def ways_to_sum(my_list=None, number=None):
