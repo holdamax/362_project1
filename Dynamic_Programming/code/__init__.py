@@ -9,4 +9,3 @@ __all__ = ['fibonacci',
            'paths_without_crossing',
            'friend_pairs',
            'optimized_painting_fence']
-
