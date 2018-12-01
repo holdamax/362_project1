@@ -17,7 +17,8 @@ def fibord(nam):
             i += 1
         print(fib_sum)
     else:
-        print('Error. The values entered must be greater than or equal to 0')
+        print('Error. The values entered must be greater or equal to 0')
+
 def descr():
     """Reading the Fibonacci sequence number"""
     while True:
@@ -25,7 +26,7 @@ def descr():
                     'sequence do you want to know? n = ')
         nam = nam.lower()
         if nam == 'q':
-            print('B')
-            break
-        else:
-            fibord(nam)
+            print('You have finished working with the Fibonacci function')
+            return 'q'
+
+        fibord(nam)
