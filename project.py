@@ -5,14 +5,19 @@ from Dynamic_Programming.code import *
 
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
+         #'3': yakobstelnum,             add init to your func
          '4': longest_sequence,
-         '5': ways_to_sum,
+         #'5': ways_to_sum,              add init to your func
+         #'6': pass,              add
          '7': ways_to_cover_in_3_steps,
          '8': paths_without_crossing,
          '9': min_max_afford,
+         #'10': palindrom,              add init to your func
          '11': friend_pairs,
+         #'12': pass,                   add
+         #'13': pass,                   add
          '14': optimized_painting_fence}
-choose = "Choose task: \n"\
+CHOOSE = "Choose task: \n"\
          "1:  Fibonacci\n"\
          "2:  Modified fibonacci\n"\
          "3:  Interesting row\n"\
@@ -30,7 +35,8 @@ choose = "Choose task: \n"\
          "q: back"
 os.system('cls')
 while True:
-    print(choose)
+    os.system('cls')
+    print(CHOOSE)
     TASK_N = input("Input task number: ")
     if TASK_N == "q":
         break

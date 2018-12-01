@@ -23,6 +23,7 @@ def descr():
 
         if choice == 'q':
             print('Bye\n')
+            cls()
             return choice
         elif choice == 'c':
             cls()
