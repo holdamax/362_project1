@@ -1,6 +1,13 @@
-""""count yacobstel numbers"""
+""""count yacobstel number"""
+def descr():
+    try:
+        print("Please input yacobstel number:")
+        num = int(input())
+        return yakobstelelement(num)
+    except:
+        print("Only number inputs")
+
 def yakobstelelement (num):
 
-    return(2**num-(-1)**num)/3
+    return int((2**num-(-1)**num)/3)
 
-print (yakobstelelement(6))
