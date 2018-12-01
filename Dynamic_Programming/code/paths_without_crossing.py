@@ -11,41 +11,41 @@ def _factorial(num):
 
     : Parameters
     ----------
-    n : integer number
+    num : integer number
 
     Returns
     -------
-    n!
-    factorial
-    """
+    factorial of num"""
     num = int(num)
-    number = 1
+    factorial = 1
     for i in range(1, num+1):
-        number *= i
-    return number
+        factorial *= i
+    return factorial
 
 
 def paths_without_crossing(num):
     """Counts numbers of ways to connect num points on a circle
     : Parameters
     ----------
-    n : number of points on a circle
+    num : integer  number of points on a circle
     Returns
     -------
-    f(n) = num! / ((num/2)! * (num/2)!)
+    f(num) = num! / ((num/2)! * (num/2)!)
         total number of ways to connect num points on a circle without crossing.
     """
-    if num.isdigit():
+    if isinstance(num, int) or num.isdigit():
         num = int(num)
+        if num == 1:
+            return 0
         if not (num % 2) and num >= 2:
             return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
     print('You entered wrond value')
 
 
-
 def descr():
-    """Check entered data for integer type and correct value
-    Calls paths_without_crossing function and check type
+    """
+    Input value
+    Calls paths_without_crossing function
     :Returns:
 
     """
@@ -58,5 +58,6 @@ def descr():
     print(result)
     return result
 
+
 if __name__ == '__main__':
-   descr()
+    descr()
