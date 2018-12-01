@@ -1,8 +1,8 @@
 
-__all__ = ['ways_to_cover_in_3_steps',
-           'fibonacci',
+__all__ = ['fibonacci',
            'fibonacci_mod',
            'ways_to_sum',
+           'ways_to_cover_in_3_steps',
            'min_max_afford',
            'longest_sequence',
            'ways_tile_floor',
