@@ -32,13 +32,19 @@ CHOOSE = "Choose task: \n"\
          "12: Ways to tile the floor\n"\
          "13: Painting the fence\n"\
          "14: Optimized painting fence: use one variable instead of a table\n"\
-         "q: back"
-os.system('cls')
+         "q: back\n"
+
+
+def cls(): os.system('cls')
+
+
+cls()
 while True:
-    os.system('cls')
+    cls()
     print(CHOOSE)
     TASK_N = input("Input task number: ")
     if TASK_N == "q":
+        cls()
         break
     try:
         while True:
