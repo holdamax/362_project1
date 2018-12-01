@@ -9,4 +9,3 @@ __all__ = ['ways_to_cover_in_3_steps',
            'paths_without_crossing',
            'friend_pairs',
            'optimized_painting_fence']
-
