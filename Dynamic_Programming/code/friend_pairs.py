@@ -9,7 +9,8 @@ If the n-th person is paired up with any of the remaining (n-1) person, then, we
 import os
 
 
-cls = lambda: os.system('cls')
+def cls():
+    os.system('cls')
 
 
 def descr():
@@ -23,8 +24,10 @@ def descr():
         if choice == 'q':
             print('Bye\n')
             return choice
-
-        itr(choice)
+        elif choice == 'c':
+            cls()
+        else:
+            itr(choice)
 
 
 def itr(n: str):
@@ -59,7 +62,6 @@ def itr(n: str):
         print(f"Number of ways to pair {n} friends is:\t {result}")
         return result
     else:
-        cls()
         print("You gave wrong input. Try again.")
         return None
 
