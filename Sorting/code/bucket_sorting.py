@@ -66,6 +66,7 @@ def descr():
     inpt = inpt.split()
     lst = list(map(int,inpt))
     result = bucket_sorting(lst)
+    print(result)
     return result
 
 

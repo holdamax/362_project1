@@ -35,6 +35,8 @@ def paths_without_crossing(num):
     """
     if isinstance(num, int) or num.isdigit():
         num = int(num)
+        if num == 1:
+            return 0
         if not (num % 2) and num >= 2:
             return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
     print('You entered wrond value')
