@@ -2,14 +2,6 @@
 over intervals within the string. We define the value Opt[i,j]
  for each interval [i,j] as the length of the longest palindromic subsequence"""
 
-def descr():
-
-    str = input(print("Please type something and I'll try to find the longest palindrom:"))
-    try:
-        return longest_pal(str)
-    except:
-        print("Only 1 string aceptable")
-
 
 def longest_pal(str):
     """calculate longest palindrom"""
@@ -44,4 +36,13 @@ def longest_pal(str):
                 else:
                     opt[i][j] = max(opt[i][j - 1], opt[i + 1][j])
 
-        return opt[0][n - 1]
+        print(opt[0][n - 1])
+
+
+def descr():
+    while True:
+        str = input("Please type something here and we will try to find the longest palindrom:")
+        if str == 'q':
+            print("That's it.")
+            return 'q'
+        longest_pal(str)

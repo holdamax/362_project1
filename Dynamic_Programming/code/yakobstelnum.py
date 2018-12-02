@@ -1,16 +1,20 @@
 """"count yacobstel number"""
 
 
-def descr():
-
-    num = int(input(print("Please input yacobstel number:")))
-    try:
-        return yakobstelelement(num)
-    except:
-        print("Only number inputs")
-
-
 def yakobstelelement(num):
     """calculate sequence"""
+    if num.isdigit():
+        num = int(num)
+        print(int((2**num-(-1)**num)/3))
+    else:
+        print('Error. The values entered must be integer')
 
-    return int((2**num-(-1)**num)/3)
+
+def descr():
+    while True:
+        num = input("Please input yacobstel number:")
+        if num == 'q':
+            print('You have finished working with the interesting row function')
+            return 'q'
+
+        yakobstelelement(num)
