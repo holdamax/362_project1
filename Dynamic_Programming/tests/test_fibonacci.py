@@ -6,6 +6,9 @@ import Dynamic_Programming.code.fibonacci as f
 
 
 def test_descr_output(capsys):
+    """
+        Test output of func descr when input is 'q'
+    """
     f.input = lambda x: 'q'
     f.descr()
     captured = capsys.readouterr()
@@ -31,7 +34,7 @@ def test_fibord_output(capsys):
 
 def test_fibord_null():
     """
-
+    Test of calculating fibonacci number when input is 0.
     """
     assert f.fibord(0) == 1
 

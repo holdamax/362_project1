@@ -6,6 +6,9 @@ import Dynamic_Programming.code.ways_to_cover_in_3_steps as f
 
 
 def test_descr_output_q(capsys):
+    """
+    Test output of func descr when input is 'q'
+    """
     f.input = lambda x: 'q'
     f.descr()
     captured = capsys.readouterr()
