@@ -9,8 +9,8 @@ from Dynamic_Programming.code import friend_pairs
                          [('3', 4),
                           ('5', 26),
                           ('64', 135041388282796985771272553475002706667235246080),
-                          ('-9', None),
-                          ('Yo', None)])
+                          ('-9', 'You gave wrong input. Try again.'),
+                          ('Yo', 'You gave wrong input. Try again.')])
 def test_itr(inputs, outputs):
     """Tests for itr() function."""
     assert friend_pairs.itr(inputs) == outputs
