@@ -40,6 +40,7 @@ def paths_without_crossing(num):
         if not (num % 2) and num >= 2:
             return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
     print('You entered wrond value')
+    return None
 
 
 def descr():
@@ -50,7 +51,7 @@ def descr():
 
     """
     inpt = input('\nPlease enter positive even number'
-                 ' even and integer...\n'
+                 ' even and integer\n'
                  'Or \'q\' to back to the menu ... ')
     if inpt.lower() == 'q':
         return 'q'
