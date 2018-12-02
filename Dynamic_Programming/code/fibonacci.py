@@ -1,5 +1,4 @@
 """Fibonacci support for doing this and that"""
-
 def fibord(nam):
     """Finding a Fibonacci number"""
     if nam.isdigit():
@@ -8,6 +7,7 @@ def fibord(nam):
 
         if nam in (0, 1):
             fib_sum = fib1
+
         if nam == 2:
             fib_sum = fib2
 
@@ -16,8 +16,8 @@ def fibord(nam):
             fib1, fib2 = fib2, fib_sum
             i += 1
         print(fib_sum)
-    else:
-        print('Error. The values entered must be greater or equal to 0')
+        return fib_sum
+    print('Error. The values entered must be greater or equal to 0')
 
 def descr():
     """Reading the Fibonacci sequence number"""

@@ -15,6 +15,7 @@ def insertion_sort(array):
 
         for i, _ in enumerate(array):
             print("%d" % array[i])
+            return array[i]
 
     except ValueError:
         print('Error. The values entered must be a numbers(etc. 12, 11, 13, 5, 6)')
