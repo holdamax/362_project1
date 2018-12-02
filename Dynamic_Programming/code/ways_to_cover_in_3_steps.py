@@ -11,10 +11,8 @@ def count_ways(nam):
             i += 1
         print(res[nam])
         return res[nam]
-    except ValueError:
-        print('Error. The values entered must be greater or equal to 0')
-    except IndexError:
-        print('Error. The values entered must be greater or equal to 0')
+    except (IndexError, ValueError, TypeError):
+        print('Error. The values entered must be integer and greater or equal to 0')
 
 def descr():
     """Reading a numbers for searching count ways"""
