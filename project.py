@@ -9,7 +9,7 @@ TASKS = {'1': fibonacci,
          '3': yakobstelnum,
          '4': longest_sequence,
          '5': ways_to_sum,
-         #'6': pass,              add
+         #'6': pass,                    add
          '7': ways_to_cover_in_3_steps,
          '8': paths_without_crossing,
          '9': min_max_afford,
