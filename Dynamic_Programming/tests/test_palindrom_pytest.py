@@ -18,7 +18,6 @@ def test_error():
                                                       ("testset", 7),
                                                       ("lol  kekek", 5),
                                                       ("Tesing longestpalaptsegnol algoritm 12321", 21)])
-
 def test_fibo(string, palindrom_length):
     """Test with different inputs."""
     assert longest_pal(string) == palindrom_length
