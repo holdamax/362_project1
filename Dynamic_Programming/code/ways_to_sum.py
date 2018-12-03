@@ -8,7 +8,8 @@ def descr():
         return 'q'
     return ways_to_sum(my_list, number)
 
-def ways_to_sum(my_list=None, number=None):
+
+def ways_to_sum(my_list = None, number = None):
     """ Function to count the total
     number of ways to sum up to 'number'
     Keyword arguments:
@@ -33,3 +34,5 @@ def ways_to_sum(my_list=None, number=None):
         print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
     except IndexError:
         print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+
+descr()
