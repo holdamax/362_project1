@@ -1,23 +1,17 @@
-"""
-Test for fibonacci.py
-"""
+"""Test for fibonacci.py."""
 import pytest
 import Dynamic_Programming.code.fibonacci as f
 
 
 def test_descr_output(capsys):
-    """
-        Test output of func descr when input is 'q'
-    """
+    """Test output of func descr when input is 'q'."""
     f.input = lambda x: 'q'
     f.descr()
     captured = capsys.readouterr()
     assert captured.out == 'You have finished working with the Fibonacci function\n'
 
 def test_fibord_output(capsys):
-    """
-    Test output of func fibord(5)
-    """
+    """Test output of func fibord(5)."""
     f.fibord(5)
     captured = capsys.readouterr()
     assert captured.out == '8\n'
@@ -26,16 +20,12 @@ def test_fibord_output(capsys):
 # @pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
 # @pytest.mark.parametrize("inputs", [(1, 2, 3, 4), [1, 2, 3, 4, 5], {1: 1, 2: 2}, 'hjbjbjb', -1, 2.4])
 # def test_fibord_wrong_value_raise(inputs):
-#     """
-#     test on wrong input type
-#     """
+#     """test on wrong input type."""
 #     f.fibord(inputs)
 
 
 def test_fibord_null():
-    """
-    Test of calculating fibonacci number when input is 0.
-    """
+    """Test of calculating fibonacci number when input is 0."""
     assert f.fibord(0) == 1
 
 
