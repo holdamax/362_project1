@@ -1,7 +1,7 @@
 __all__ = ['fibonacci',
            'fibonacci_mod',
            'palindrom',
-           #'yakobstelnum'              add init to your func
+           'yakobstelnum',
            'ways_to_sum',
            'ways_to_cover_in_3_steps',
            'min_max_afford',

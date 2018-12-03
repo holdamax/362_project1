@@ -2,13 +2,13 @@
 
 import os
 from Dynamic_Programming.code import *
-from Sorting.code import *
+# from Sorting.code import *
 
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
          '3': yakobstelnum,
          '4': longest_sequence,
-         #'5': ways_to_sum,              add init to your func
+         '5': ways_to_sum,
          #'6': pass,              add
          '7': ways_to_cover_in_3_steps,
          '8': paths_without_crossing,

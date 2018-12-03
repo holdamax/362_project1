@@ -3,7 +3,7 @@ over intervals within the string. We define the value Opt[i,j]
  for each interval [i,j] as the length of the longest palindromic sub-sequence"""
 
 from nose.tools import assert_equals
-from palindrom import longest_pal
+from Dynamic_Programming.code import palindrom
 
                                 
 def test_func():
