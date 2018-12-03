@@ -5,10 +5,11 @@ Find which is the member of position n
 
 
 def descr():
+    """Description function for checking inputs"""
     size = input("Please input position of fibonacci number: ")
     try:
         return fibo(int(size))
-    except:
+    except (TypeError, ValueError, RecursionError):
         print("Wrong inputs. Input one positive integer number.")
 
 
