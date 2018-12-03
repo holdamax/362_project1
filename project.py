@@ -6,7 +6,7 @@ from Sorting.code import *
 
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
-         '3': yakobstelnum,
+         #'3': yakobstelnum,
          '4': longest_sequence,
          #'5': ways_to_sum,              add init to your func
          #'6': pass,              add

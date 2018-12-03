@@ -1,6 +1,6 @@
 __all__ = ['fibonacci',
            'fibonacci_mod',
-           #'yakobstelnum'              add init to your func
+           'yakobstelnum',              #add init to your func
            'ways_to_sum',
            'ways_to_cover_in_3_steps',
            'min_max_afford',
@@ -8,4 +8,5 @@ __all__ = ['fibonacci',
            'ways_tile_floor',
            'paths_without_crossing',
            'friend_pairs',
-           'optimized_painting_fence']
+           'optimized_painting_fence',
+           'palindrom']
