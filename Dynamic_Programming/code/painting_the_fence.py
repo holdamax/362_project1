@@ -6,6 +6,15 @@ such that at most 2 adjacent posts have the same color
 """
 
 
+def descr():
+    """Function for to input and verification data"""
+    number_posts = input('Please enter a number of posts (e.g. 40): ')
+    number_colors = input('Please enter a number of colors (e.g. 40): ')
+    if number_posts == 'q' or number_colors == 'q':
+        return 'q'
+    return ways_to_paint_fence(number_posts, number_colors)
+
+
 def ways_to_paint_fence(number_posts: int, number_colors: int):
     """
     1) if parameters are not int and <0 raise error;
@@ -21,38 +30,28 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
     same[i]  = diff[i-1]
     diff[i]  = (diff[i-1] + diff[i-2]) * (k-1)= total[i-1] * (k-1)
     """
-    if isinstance(number_posts, int) and isinstance(number_colors, int) \
-            and number_posts >= 0 and number_colors >= 0:
-
-        if number_posts == 0:
-            return 0
-
-        if number_posts == 1:
-            return number_colors
-
-        same = number_colors
-        diff = number_colors * (number_colors - 1)
-
-        for _ in range(3, number_posts + 1):
-            prev_diff = diff
-            diff = (same + diff) * (number_colors - 1)
-            same = prev_diff
-        return same + diff
-
-    return 'Please enter data like (posts, colors). E.g. (5,2)'
-
-
-def descr(posts, colors):
-    """
-        function created for input and to call main function
-    """
     try:
-        print(ways_to_paint_fence(int(posts), int(colors)))
+        number_posts = int(number_posts)
+        number_colors = int(number_colors)
+        if number_posts >= 0 and number_colors >= 0:
+
+            if number_posts == 0:
+                return 0
+
+            if number_posts == 1:
+                return number_colors
+
+            same = number_colors
+            diff = number_colors * (number_colors - 1)
+
+            for _ in range(3, number_posts + 1):
+                prev_diff = diff
+                diff = (same + diff) * (number_colors - 1)
+                same = prev_diff
+            print(same + diff)
+
+        return 'Please enter data like (posts, colors). E.g. (5,2)'
     except TypeError:
         print('Please enter positive integer > 0')
     except ValueError:
         print('Please enter positive integer > 0')
-
-
-descr(input('Please enter a number of posts (e.g. 40):'),
-      input('Please enter a number of colors (e.g. 40):'))

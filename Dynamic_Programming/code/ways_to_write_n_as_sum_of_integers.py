@@ -3,6 +3,13 @@ This method calculates in how many ways
 is possible to calculate n with positive integers
 """
 
+def descr():
+    """Function for to input and verification data"""
+    my_list = input('Please enter a number (e.g. 40):')
+    if my_list == 'q':
+        return 'q'
+    return count_ways(my_list)
+
 
 def count_ways(number: int):
     """
@@ -12,27 +19,18 @@ def count_ways(number: int):
     manner using the base case (n = 0)
     Initialize all table values as 0
     """
-    if number > 0:
-        table = [0] * (number + 1)
-        table[0] = 1
-        for i in range(1, number):
-            for j in range(i, number + 1):
-                table[j] += table[j - i]
-        return table[number]
-    print('Please enter positive integer > 0')
-    return None
-
-
-def descr(number):
-    """
-    function created for input and to call main function
-    """
     try:
-        print(count_ways(int(number)))
+        number = int(number)
+        if number > 0:
+            table = [0] * (number + 1)
+            table[0] = 1
+            for i in range(1, number):
+                for j in range(i, number + 1):
+                    table[j] += table[j - i]
+        print(table[number])
     except TypeError:
         print('Please enter positive integer > 0')
     except ValueError:
         print('Please enter positive integer > 0')
-
-
-descr(input('Please enter a number (e.g. 40):'))
+    except IndexError:
+        print('Please enter positive integer > 0')
