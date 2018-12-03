@@ -1,6 +1,7 @@
 
 __all__ = ['test_fibonacci',
            'test_fibonacci_mod',
+           'test_fibonacci_mod1',
            'test_ways_to_sum',
            'test_ways_to_cover_in_3_steps',
            'test_min_max_afford',
