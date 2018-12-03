@@ -1,4 +1,4 @@
-"""Tests for friend_pairs.py"""
+"""Tests for paths_without_crossing.py"""
 
 import pytest
 import sys
