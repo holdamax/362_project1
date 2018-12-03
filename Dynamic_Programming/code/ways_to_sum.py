@@ -33,4 +33,4 @@ def ways_to_sum(my_list=None, number=None):
         print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
     except IndexError:
         print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
-descr()
+
