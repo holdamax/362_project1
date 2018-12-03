@@ -14,8 +14,8 @@ def insertion_sort(array):
             array[j + 1] = k
 
         for i, _ in enumerate(array):
-            print("%d" % array[i])
-            return array[i]
+            print(array[i])
+        return array
 
     except (IndexError, ValueError, TypeError):
         print('Error. The values entered must be a integer numbers(etc. 12, 11, 13, 5, 6)')
