@@ -18,3 +18,8 @@ def descr():
             return 'q'
 
         yakobstelelement(num)
+
+
+if __name__ == '__main__ ':
+
+    descr()

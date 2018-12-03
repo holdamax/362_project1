@@ -1,5 +1,6 @@
 __all__ = ['fibonacci',
            'fibonacci_mod',
+           'palindrom',
            #'yakobstelnum'              add init to your func
            'ways_to_sum',
            'ways_to_cover_in_3_steps',
