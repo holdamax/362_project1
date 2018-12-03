@@ -7,5 +7,6 @@ __all__ = ['fibonacci',
            'longest_sequence',
            'ways_tile_floor',
            'paths_without_crossing',
+           'palindrom',
            'friend_pairs',
            'optimized_painting_fence']
