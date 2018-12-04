@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*/__pycache__/*
 *.py[cod]
 *$py.class
 *.pyc
@@ -10,6 +10,8 @@ __pycache__/
 #PyCharm
 .git/
 .idea/
+*\Dynamic_Programming\__pycache__
+*\Dynamic_Programming\code\__pycache__
 
 # Distribution / packaging
 .Python
@@ -107,3 +109,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+*.pyc
+*.pyc
+Dynamic_Programming/code/__pycache__/ways_to_sum.cpython-36.pyc
+*.pyc

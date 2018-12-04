@@ -6,10 +6,17 @@ Then either the n-th person remains single, or paired up.
 If the n-th person is single, then we recur for (n - 1) friends.
 If the n-th person is paired up with any of the remaining (n-1) person, then, we recur (n-1)*f(n-2).
 """
+import os
+
+
+def cls():
+    """Clear screen."""
+    os.system('cls')
 
 
 def descr():
     """Entry point function for the menu app."""
+    cls()
     while True:
         choice = input(
             '\n>>> Please enter integer positive number of friends or X, if you want to exit: ')
@@ -17,9 +24,12 @@ def descr():
 
         if choice == 'q':
             print('Bye\n')
+            cls()
             return choice
-
-        itr(choice)
+        if choice == 'c':
+            cls()
+        else:
+            itr(choice)
 
 
 def itr(n: str):
@@ -50,8 +60,7 @@ def itr(n: str):
             for i in range(2, n + 1):
                 result = f_1 + (i - 1) * f_2
                 f_2, f_1 = f_1, result
-
-        print(f"Number of ways to pair {n} friends is: {result}")
+        print(f"Number of ways to pair {n} friends is:\t {result}")
         return result
     else:
         print("You gave wrong input. Try again.")
