@@ -6,8 +6,15 @@ def descr():
     number = input('Please, input the number which has to be represented (etc. 7): ')
     if my_list == 'q' or number == 'q':
         return 'q'
-    return ways_to_sum(my_list, number)
-
+    try:
+        print(ways_to_sum(my_list, number))
+        return None
+    except TypeError:
+        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+    except ValueError:
+        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+    except IndexError:
+        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
 
 def ways_to_sum(my_list = None, number = None):
     """ Function to count the total
@@ -16,8 +23,11 @@ def ways_to_sum(my_list = None, number = None):
             my_list -- the array which has to be represented (default None)
             number -- the number which has to be represented (default None)"""
     try:
-        number = abs(int(number))
-        my_list = [abs(int(i)) for i in my_list.split(',')]
+        number = int(number)
+        if number == 0:
+            print('Error! Please, enter correct number > 0 (etc. 7)')
+            return None
+        my_list = [int(i) for i in my_list.split(',')]
         count = [0 for i in range(number + 1)]
         count[0] = 1
         len_my_list = len(my_list)
@@ -29,13 +39,9 @@ def ways_to_sum(my_list = None, number = None):
         print("Total number of ways = {}".format(count[number]))
         return count[number]
     except TypeError:
-        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+        return 'Error! Please, enter correct list and number (etc. 1,5,6 and 7)'
     except ValueError:
-        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+        return 'Error! Please, enter correct list and number (etc. 1,5,6 and 7)'
     except IndexError:
-        print('Error! Please, enter correct list and number (etc. 1,5,6 and 7)')
+        return 'Error! Please, enter correct list and number (etc. 1,5,6 and 7)'
 
-
-if __name__ == '__main__ ':
-
-    descr()

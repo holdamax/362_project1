@@ -7,7 +7,15 @@ def descr():
     m_size = input('Please, input the m size floor > 0 (etc. 3): ')
     if n_size == 'q' or m_size == 'q':
         return 'q'
-    return ways_tile_floor(n_size, m_size)
+    try:
+        print(ways_tile_floor(n_size, m_size))
+        return None
+    except TypeError:
+        print('Error! Please, enter correct size (etc. 2 and 3)')
+    except ValueError:
+        print('Error! Please, enter correct size (etc. 2 and 3)')
+    except IndexError:
+        print('Error! Please, enter correct size (etc. 2 and 3)')
 
 def ways_tile_floor(n_size, m_size):
     """ Function to count the number of ways to tile the given floor using 1 x m tiles.
@@ -32,8 +40,8 @@ def ways_tile_floor(n_size, m_size):
         print("All combinations: {}".format(count[n_size]))
         return count[n_size]
     except TypeError:
-        print('Error! Please, enter correct size (etc. 2 and 3)')
+        return 'Error! Please, enter correct size (etc. 2 and 3)'
     except ValueError:
-        print('Error! Please, enter correct size (etc. 2 and 3)')
+        return 'Error! Please, enter correct size (etc. 2 and 3)'
     except IndexError:
-        print('Error! Please, enter correct size > 0 (etc. 2 and 3)')
+        return 'Error! Please, enter correct size (etc. 2 and 3)'
