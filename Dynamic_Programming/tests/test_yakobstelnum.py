@@ -20,6 +20,7 @@ def test_fail():
     yakobstelelement('qwerty')
 
 
-@pytest.mark.parametrize("yakobstelel_num, yakobstel_val", [(1, 1), (2, 1), (5, 11), (7, 43), (9, 171)])
-def test_yakob(yakobstelel_num, yakobstel_val):
+@pytest.mark.parametrize("inputs, outputs", [(1, 1), (2, 1), (5, 11), (7, 43), (9, 171)])
+def test_yakob(inputs, outputs):
     """calculate yakobstel number with different inputs."""
+    assert yakobstelelement(inputs) == outputs
