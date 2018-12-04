@@ -15,7 +15,13 @@ def descr():
 
 def longest_seq_with_diff_one(arr):
     """Find how many numbers we have with difference one in the sub sequence.
+<<<<<<< HEAD
     Input: list of strings - Sequence with integer numbers
+=======
+
+    Input: list of strings - Sequence with integer numbers
+
+>>>>>>> origin
     Returns
     -------
     Number, which represents the longest sequence of integers with difference one.

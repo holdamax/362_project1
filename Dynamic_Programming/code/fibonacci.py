@@ -1,23 +1,22 @@
 """Fibonacci support for doing this and that"""
-
 def fibord(nam):
     """Finding a Fibonacci number"""
-    if nam.isdigit():
-        nam = int(nam)
-        fib_sum, fib1, fib2 = 0, 1, 2
+    try:
+        if isinstance(nam, int) or nam.isdigit():
+            nam = int(nam)
+            fib_sum = [0] * (nam + 2)
+            fib_sum[0], fib_sum[1] = 1, 1
 
-        if nam in (0, 1):
-            fib_sum = fib1
-        if nam == 2:
-            fib_sum = fib2
+            for i in range(2, nam+1):
+                fib_sum[i] = fib_sum[i-1] + fib_sum[i-2]
+                i += 1
+            print(fib_sum[nam])
+            return fib_sum[nam]
+        print('Error. The values entered must be integer and greater or equal to 0')
+        return None
 
-        for i in range(3, nam+1):
-            fib_sum = fib2 + fib1
-            fib1, fib2 = fib2, fib_sum
-            i += 1
-        print(fib_sum)
-    else:
-        print('Error. The values entered must be greater or equal to 0')
+    except (IndexError, ValueError, TypeError):
+        print('Error. The values entered must be integer and greater or equal to 0')
 
 def descr():
     """Reading the Fibonacci sequence number"""
