@@ -8,5 +8,7 @@ __all__ = ['test_fibonacci',
            'test_ways_tile_floor',
            'test_pytest_paths_without_crossing.py',
            'test_friend_pairs',
-           'test_optimized_painting_fence']
+           'test_optimized_painting_fence',
+           'test_ways_to_write_n_as_sum_of_integers',
+           'test_pytest_ways_to_sum']
 
