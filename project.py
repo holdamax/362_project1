@@ -9,14 +9,14 @@ TASKS = {'1': fibonacci,
          '3': yakobstelnum,
          '4': longest_sequence,
          '5': ways_to_sum,
-         #'6': pass,                    add
+         '6': ways_to_write_n_as_sum_of_integers,
          '7': ways_to_cover_in_3_steps,
          '8': paths_without_crossing,
          '9': min_max_afford,
          '10': palindrom,
          '11': friend_pairs,
          #'12': pass,                   add
-         #'13': pass,                   add
+         '13': painting_the_fence,
          '14': optimized_painting_fence}
 CHOOSE = "Choose task: \n"\
          "1:  Fibonacci\n"\

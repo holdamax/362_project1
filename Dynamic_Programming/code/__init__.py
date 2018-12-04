@@ -1,6 +1,5 @@
 __all__ = ['fibonacci',
            'fibonacci_mod',
-           'palindrom',
            'yakobstelnum',
            'ways_to_sum',
            'ways_to_cover_in_3_steps',
@@ -8,5 +7,8 @@ __all__ = ['fibonacci',
            'longest_sequence',
            'ways_tile_floor',
            'paths_without_crossing',
+           'palindrom',
            'friend_pairs',
-           'optimized_painting_fence']
+           'optimized_painting_fence',
+           'ways_to_write_n_as_sum_of_integers',
+           'painting_the_fence']
