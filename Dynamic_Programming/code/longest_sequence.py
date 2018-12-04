@@ -24,7 +24,12 @@ def descr():
             longest_seq_with_diff_one(in_list)
 
 
-def count_it(arr):
+def count_it(arr) ->int or str:
+    """Find how many numbers we have with difference one in the sub sequence.
+
+    Input: coma separated integers - Sequence with integer numbers
+
+    Returns: Number, which represents the longest sequence of integers with difference one."""
     arr = sorted(arr)
     print(f"Using list {arr}...")
 
@@ -41,12 +46,7 @@ def count_it(arr):
 
 
 def longest_seq_with_diff_one(arr: int or str, *args: int or str) -> int or str:
-    """Find how many numbers we have with difference one in the sub sequence.
 
-    Input: coma separated integers - Sequence with integer numbers
-
-    Returns: Number, which represents the longest sequence of integers with difference one.
-    """
     if arr == '':
         print("Please enter correct input.")
         return "Please enter correct input."
@@ -60,7 +60,7 @@ def longest_seq_with_diff_one(arr: int or str, *args: int or str) -> int or str:
     elif isinstance(arr, list):
         for arg in args:
             arr.append(arg)
-            print('here')
+        count_it(arr)
     elif isinstance(arr, str):
         try:
             arr = [int(i) for i in arr.split(',')]
