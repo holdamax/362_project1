@@ -8,7 +8,7 @@ def descr():
     if n_size == 'q' or m_size == 'q':
         return 'q'
     try:
-        print(ways_tile_floor(n_size, m_size))
+        print("All combinations: {}".format(ways_tile_floor(n_size, m_size)))
         return None
     except TypeError:
         print('Error! Please, enter correct size (etc. 2 and 3)')
@@ -22,26 +22,26 @@ def ways_tile_floor(n_size, m_size):
         Keyword arguments:
                 n_size -- n size floor (default 0)
                 m_size -- m size floor (default 0)"""
-    try:
-        n_size = int(n_size)
-        m_size = int(m_size)
-        count = []
-        for i in range(n_size + 2):
-            count.append(0)
-        count[0] = 0
+    # try:
+    n_size = int(n_size)
+    m_size = int(m_size)
+    count = []
+    for i in range(n_size + 2):
+        count.append(0)
+    count[0] = 0
 
-        for i in range(1, n_size + 1):
-            if i > m_size:
-                count[i] = count[i - 1] + count[i - m_size]
-            elif i < m_size:
-                count[i] = 1
-            else:
-                count[i] = 2
-        print("All combinations: {}".format(count[n_size]))
-        return count[n_size]
-    except TypeError:
-        return 'Error! Please, enter correct size (etc. 2 and 3)'
-    except ValueError:
-        return 'Error! Please, enter correct size (etc. 2 and 3)'
-    except IndexError:
-        return 'Error! Please, enter correct size (etc. 2 and 3)'
+    for i in range(1, n_size + 1):
+        if i > m_size:
+            count[i] = count[i - 1] + count[i - m_size]
+        elif i < m_size:
+            count[i] = 1
+        else:
+            count[i] = 2
+    return count[n_size]
+    # except TypeError:
+    #     return 'Error! Please, enter correct size (etc. 2 and 3)'
+    # except ValueError:
+    #     return 'Error! Please, enter correct size (etc. 2 and 3)'
+    # except IndexError:
+    #     return 'Error! Please, enter correct size (etc. 2 and 3)'
+
