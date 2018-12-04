@@ -1,8 +1,9 @@
 """Main project module"""
 
 import os
+
 from Dynamic_Programming.code import *
-# from Sorting.code import *
+from Sorting.code import *
 
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
@@ -15,10 +16,18 @@ TASKS = {'1': fibonacci,
          '9': min_max_afford,
          '10': palindrom,
          '11': friend_pairs,
-         #'12': pass,                   add
+         '12': ways_tile_floor,
          '13': painting_the_fence,
-         '14': optimized_painting_fence}
+         '14': optimized_painting_fence,
+         '15': insertion,
+         '16': countingsort,
+         '17': quick_sort,
+         '18': bucket_sorting,
+         #'19': merge
+         }
+
 CHOOSE = "Choose task: \n"\
+         "\n\tDynamic Programming\n"\
          "1:  Fibonacci\n"\
          "2:  Modified fibonacci\n"\
          "3:  Interesting row\n"\
@@ -33,7 +42,13 @@ CHOOSE = "Choose task: \n"\
          "12: Ways to tile the floor\n"\
          "13: Painting the fence\n"\
          "14: Optimized painting fence: use one variable instead of a table\n"\
-         "q: back\n"
+         "\n\tSorting\n"\
+         "15: Insertion sort\n"\
+         "16: Counting sort\n"\
+         "17: Quick sort\n"\
+         "18: Bucket sort\n"\
+         "19: Merge sort\n"\
+         "\nq: back\n"
 
 
 def cls(): os.system('cls')
