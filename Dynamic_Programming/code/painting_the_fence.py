@@ -9,22 +9,22 @@ such that at most 2 adjacent posts have the same color
 def descr():
     """Function for to input and verification data"""
     number_posts = input('Please enter a number of posts: ' +
-                         '0 < number < 1000000 (e.g. 10): ')
+                         '0 < number < 10000 (e.g. 10): ')
 
     if number_posts == 'q':
         return 'q'
 
     try:
         number_posts = int(number_posts)
-        if number_posts < 0 or number_posts >= 1000000:
-            print('Please enter positive integer < 1000000')
+        if number_posts < 0 or number_posts >= 10000:
+            print('Please enter positive integer < 10000')
             return None
     except (TypeError, ValueError, IndexError):
-        print('Please enter positive integer < 1000000')
+        print('Please enter positive integer < 10000')
         return None
 
     number_colors = input('Please enter a number of colors: ' +
-                          '0 < number < 1000000 (e.g. 5): ')
+                          '0 < number < 10000 (e.g. 5): ')
 
     if number_colors == 'q':
         return 'q'
@@ -35,7 +35,7 @@ def descr():
                   '.format(ways_to_paint_fence(number_posts, number_colors)))
         return None
     except (TypeError, ValueError, IndexError):
-        print('Please enter positive integer < 1000000')
+        print('Please enter positive integer < 10000')
 
 
 def ways_to_paint_fence(number_posts: int, number_colors: int):
@@ -53,10 +53,12 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
     same[i]  = diff[i-1]
     diff[i]  = (diff[i-1] + diff[i-2]) * (k-1)= total[i-1] * (k-1)
     """
+
     if not isinstance(number_posts, int) or not isinstance(number_colors, int):
         raise TypeError('Please enter positive integer < 1000000')
 
     if 0 <= number_posts < 1000000 and 0 <= number_colors < 1000000:
+
 
         if number_posts == 0:
             return 0
@@ -73,4 +75,4 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
             same = prev_diff
         return same + diff
 
-    raise ValueError('Please enter positive integer < 1000000')
+    raise ValueError('Please enter positive integer < 10000')

@@ -14,6 +14,7 @@ def descr():
 sum of positive integers".format(number, count_ways(int(number))))
     except (TypeError, ValueError, IndexError):
         print('Please enter number like: 0 < integer number < 10000')
+    return None
 
 
 def count_ways(number: int):
