@@ -8,7 +8,7 @@ TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
          '3': yakobstelnum,
          '4': longest_sequence,
-         #'5': ways_to_sum,              add init to your func
+         '5': ways_to_sum,
          '6': ways_to_write_n_as_sum_of_integers,
          '7': ways_to_cover_in_3_steps,
          '8': paths_without_crossing,
