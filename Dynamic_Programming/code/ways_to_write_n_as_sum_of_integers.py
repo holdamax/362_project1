@@ -6,15 +6,15 @@ is possible to calculate n with positive integers
 
 def descr():
     """Function for to input and verification data"""
-    my_list = input('Please enter a number (e.g. 40):')
-    if my_list == 'q':
+    number = input('Please enter a number: 0 < integer number < 10000 (e.g. 40):')
+    if number == 'q':
         return 'q'
     try:
-        print(count_ways(int(my_list)))
-        return None
+        print("There are {1} ways to write {0} as \
+sum of positive integers".format(number, count_ways(int(number))))
     except (TypeError, ValueError, IndexError):
-        print('Please enter positive integer > 0')
-        return None
+        print('Please enter number like: 0 < integer number < 10000')
+    return None
 
 
 def count_ways(number: int):
@@ -25,13 +25,13 @@ def count_ways(number: int):
     manner using the base case (n = 0)
     Initialize all table values as 0
     """
-    try:
-        if number > 0:
-            table = [0] * (number + 1)
-            table[0] = 1
-            for i in range(1, number):
-                for j in range(i, number + 1):
-                    table[j] += table[j - i]
-            return table[number]
-    except (TypeError, ValueError, IndexError):
-        return 'Please enter positive integer > 0'
+    if not isinstance(number, int):
+        raise TypeError('Please enter number like: 0 < integer number < 10000')
+    if 10000 > number > 0:
+        table = [0] * (number + 1)
+        table[0] = 1
+        for i in range(1, number):
+            for j in range(i, number + 1):
+                table[j] += table[j - i]
+        return table[number]
+    raise ValueError('Please enter number like: 0 < integer number < 10000')
