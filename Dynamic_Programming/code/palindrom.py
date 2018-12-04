@@ -5,19 +5,19 @@ over intervals within the string. We define the value Opt[i,j]
 
 def longest_pal(inp_str):
     """calculate longest palindrom"""
-    n = len(inp_str)
-    if n > 100:
+    len_inp_str = len(inp_str)
+    if len_inp_str > 100:
         return "String not more than 100 symbols !"
 
     # initialize opt Table
-    opt = [[0 for i in range(n)] for j in range(n)]
+    opt = [[0 for i in range(len_inp_str)] for j in range(len_inp_str)]
 
     # opt of single char is 1
-    for i in range(n):
+    for i in range(len_inp_str):
         opt[i][i] = 1
 
     # opt for adjacent chars is 2 if same, 1 otherwise
-    for i in range(n - 1):
+    for i in range(len_inp_str - 1):
         if inp_str[i] == inp_str[i + 1]:
             opt[i][i + 1] = 2
         else:
@@ -28,16 +28,16 @@ def longest_pal(inp_str):
         # we compute opt table entry for each sil length and
         # starting index i
 
-    for sil in range(2, n + 1):
-        for i in range(n - sil + 1):
+    for sil in range(2, len_inp_str + 1):
+        for i in range(len_inp_str - sil + 1):
             j = i + sil - 1
             if inp_str[i] == inp_str[j]:
                 opt[i][j] = opt[i + 1][j - 1] + 2
             else:
                 opt[i][j] = max(opt[i][j - 1], opt[i + 1][j])
-    
-    print(opt[0][n - 1]) 
-    return opt[0][n - 1]
+    print(opt[0][len_inp_str - 1])
+    return opt[0][len_inp_str - 1]
+
 
 def descr():
     while True:
@@ -46,7 +46,7 @@ def descr():
             print("That's it.")
             return 'q'
 
-        longest_pal(int_str)
+        longest_pal(inp_str)
 
 
 if __name__ == '__main__':
