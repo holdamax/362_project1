@@ -26,7 +26,7 @@ def ways_to_sum(my_list = None, number = None):
     number = int(number)
     if number == 0:
         print('Error! Please, enter correct number > 0 (etc. 7)')
-        return None
+        return 0
     my_list = [int(i) for i in my_list.split(',')]
     count = [0 for i in range(number + 1)]
     count[0] = 1
@@ -42,5 +42,3 @@ def ways_to_sum(my_list = None, number = None):
     #     return 'Error! Please, enter correct list and number (etc. 1,5,6 and 7)'
     # except IndexError:
     #     return 'Error! Please, enter correct list and number (etc. 1,5,6 and 7)'
-
-
