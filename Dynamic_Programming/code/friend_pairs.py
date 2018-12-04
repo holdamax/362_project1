@@ -10,6 +10,7 @@ import os
 
 
 def cls():
+    """Clear screen."""
     os.system('cls')
 
 
@@ -25,7 +26,7 @@ def descr():
             print('Bye\n')
             cls()
             return choice
-        elif choice == 'c':
+        if choice == 'c':
             cls()
         else:
             itr(choice)
@@ -59,7 +60,6 @@ def itr(n: str):
             for i in range(2, n + 1):
                 result = f_1 + (i - 1) * f_2
                 f_2, f_1 = f_1, result
-        cls()
         print(f"Number of ways to pair {n} friends is:\t {result}")
         return result
     else:
