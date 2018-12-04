@@ -1,2 +1,7 @@
 
-__all__ = ['insertion']
+__all__ = ['insertion',
+		   'countingsort',
+		   'quick_sort',
+		   'bucket_sorting',
+		   #'merge',
+		   'quick_sort']

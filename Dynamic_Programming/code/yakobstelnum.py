@@ -1,4 +1,5 @@
-""""count yacobstel number"""
+""""countwhich is the member of position num
+         in Yacobstel sequence"""
 
 
 def yakobstelelement(num):
@@ -6,8 +7,11 @@ def yakobstelelement(num):
     if num.isdigit():
         num = int(num)
         print(int((2**num-(-1)**num)/3))
+        return int((2**num-(-1)**num)/3)
+
     else:
-        print('Error. The values entered must be integer')
+        print('Error. The values entered must be integer')         
+        return 'Error. The values entered must be integer'
 
 
 def descr():
@@ -18,3 +22,8 @@ def descr():
             return 'q'
 
         yakobstelelement(num)
+
+
+if __name__ == '__main__':
+
+    descr()

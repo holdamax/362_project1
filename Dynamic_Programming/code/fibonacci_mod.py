@@ -5,16 +5,28 @@ Find which is the member of position n
 
 
 def descr():
-    size = input("Please input position of fibonacci number: ")
-    try:
-        return fibo(int(size))
-    except:
-        print("Wrong inputs. Input one positive integer number.")
+    """Description function for checking inputs"""
+    while True:
+        try:
+            size = input("Please input position of fibonacci number: ")
+            if size == 'q':
+                print('You have finished working with the Fibonacci mod function')
+                return 'q'
+            print(fibo(int(size)))
+        except (TypeError, ValueError, RecursionError):
+            print("Wrong inputs. Input one positive integer number.")
 
 
-def fibo(size):
+def fibo(size: int):
     """Calculate Modified Fibonacci number."""
-
-    if size in (1, 2, 3):
-        return 1
-    return fibo(size-1) + fibo(size-3)
+    try:
+        if size <= 0:
+            raise RecursionError
+        if size > 45:
+            print("Sorry, number is too big. Calculating will take too much time.")
+            return None
+        if size in (1, 2, 3):
+            return 1
+        return fibo(size-1) + fibo(size-3)
+    except (TypeError, ValueError, RecursionError):
+        print("Wrong inputs. Input one positive integer number.")
