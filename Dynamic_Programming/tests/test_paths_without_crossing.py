@@ -1,9 +1,7 @@
 """Tests for paths_without_crossing.py"""
 
 import pytest
-import sys
-sys.path.insert(0, "../code")
-from paths_without_crossing import paths_without_crossing
+from Dynamic_Programming.code.paths_without_crossing import paths_without_crossing
 
 @pytest.mark.parametrize('inputs, outputs',
                          [('2', 1),
