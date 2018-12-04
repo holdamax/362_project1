@@ -17,8 +17,16 @@ def descr():
             print("Wrong inputs. Input one positive integer number.")
 
 
-def fibo(size):
+def fibo(size: int):
     """Calculate Modified Fibonacci number."""
-    if size in (1, 2, 3):
-        return 1
-    return fibo(size-1) + fibo(size-3)
+    try:
+        if size <= 0:
+            raise RecursionError
+        if size > 45:
+            print("Sorry, number is too big. Calculating will take too much time.")
+            return None
+        if size in (1, 2, 3):
+            return 1
+        return fibo(size-1) + fibo(size-3)
+    except (TypeError, ValueError, RecursionError):
+        print("Wrong inputs. Input one positive integer number.")
