@@ -9,4 +9,6 @@ __all__ = ['fibonacci',
            'paths_without_crossing',
            'palindrom',
            'friend_pairs',
-           'optimized_painting_fence']
+           'optimized_painting_fence',
+           'ways_to_write_n_as_sum_of_integers',
+           'painting_the_fence']
