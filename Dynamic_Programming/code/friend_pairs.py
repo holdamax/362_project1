@@ -60,11 +60,11 @@ def itr(n: str):
             for i in range(2, n + 1):
                 result = f_1 + (i - 1) * f_2
                 f_2, f_1 = f_1, result
+        cls()
         print(f"Number of ways to pair {n} friends is:\t {result}")
         return result
     else:
-        print("You gave wrong input. Try again.")
-        return None
+        return "You gave wrong input. Try again."
 
 
 if __name__ == '__main__':
