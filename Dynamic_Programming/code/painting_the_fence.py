@@ -8,34 +8,34 @@ such that at most 2 adjacent posts have the same color
 
 def descr():
     """Function for to input and verification data"""
-    number_posts = input('Please enter a number of posts (e.g. 10): ')
+    number_posts = input('Please enter a number of posts: ' +
+                         '0 < number < 1000000 (e.g. 10): ')
 
     if number_posts == 'q':
         return 'q'
 
     try:
         number_posts = int(number_posts)
-
+        if number_posts < 0 or number_posts >= 1000000:
+            print('Please enter positive integer < 1000000')
+            return None
     except (TypeError, ValueError, IndexError):
-        print('Please enter positive integer > 0')
+        print('Please enter positive integer < 1000000')
         return None
 
-    number_colors = input('Please enter a number of colors (e.g. 5): ')
+    number_colors = input('Please enter a number of colors: ' +
+                          '0 < number < 1000000 (e.g. 5): ')
 
     if number_colors == 'q':
         return 'q'
 
     try:
         number_colors = int(number_colors)
-
-    except (TypeError, ValueError, IndexError):
-        print('Please enter positive integer > 0')
+        print('There are {} ways to paint your fence \
+                  '.format(ways_to_paint_fence(number_posts, number_colors)))
         return None
-
-    print('There are {} ways to paint your fence \
-          '.format(ways_to_paint_fence(number_posts, number_colors)))
-
-    return None
+    except (TypeError, ValueError, IndexError):
+        print('Please enter positive integer < 1000000')
 
 
 def ways_to_paint_fence(number_posts: int, number_colors: int):
@@ -53,26 +53,21 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
     same[i]  = diff[i-1]
     diff[i]  = (diff[i-1] + diff[i-2]) * (k-1)= total[i-1] * (k-1)
     """
-    try:
-        if number_posts >= 0 and number_colors >= 0:
+    if 0 <= number_posts < 1000000 and 0 <= number_colors < 1000000:
 
-            if number_posts == 0:
-                print('0')
-                return 0
+        if number_posts == 0:
+            return 0
 
-            if number_posts == 1:
-                print(number_colors)
-                return number_colors
+        if number_posts == 1:
+            return number_colors
 
-            same = number_colors
-            diff = number_colors * (number_colors - 1)
+        same = number_colors
+        diff = number_colors * (number_colors - 1)
 
-            for _ in range(3, number_posts + 1):
-                prev_diff = diff
-                diff = (same + diff) * (number_colors - 1)
-                same = prev_diff
-            return same + diff
+        for _ in range(3, number_posts + 1):
+            prev_diff = diff
+            diff = (same + diff) * (number_colors - 1)
+            same = prev_diff
+        return same + diff
 
-        return 'Please enter positive integer > 0'
-    except (TypeError, ValueError, IndexError):
-        return 'Please enter positive integer > 0'
+    raise ValueError('Please enter positive integer < 1000000')
