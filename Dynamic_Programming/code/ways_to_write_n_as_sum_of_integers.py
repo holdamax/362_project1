@@ -32,6 +32,6 @@ def count_ways(number: int):
             for i in range(1, number):
                 for j in range(i, number + 1):
                     table[j] += table[j - i]
-        return table[number]
+            return table[number]
     except (TypeError, ValueError, IndexError):
         return 'Please enter positive integer > 0'
