@@ -1,4 +1,4 @@
-""" Weys to cover in 3 steps"""
+""" Ways to cover in 3 steps"""
 def count_ways(nam):
     """Function for searching count ways"""
     try:

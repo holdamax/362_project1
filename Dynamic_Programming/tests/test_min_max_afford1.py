@@ -11,12 +11,19 @@ def test_descr_output(capsys):
 
 
 @pytest.mark.xfail(raises=(TypeError, ValueError, RecursionError))
-@pytest.mark.parametrize("low", "high", "days", [((4, 2), [10, 12, 11, 16, 11], -1),
+@pytest.mark.parametrize("low, high, days, raises", [((4, 2), [10, 12, 11, 16, 11], -1),
                                                  ([10, 12, 11, 16, 11], (4, 2), 0),
                                                  ({1: 2, 3: 4}, 5, [2, 4, 6, 1]),
                                                  ('jffkflоарблід', -1, 0),
                                                  (4.5, 7, ' '),
                                                  ('','','')])
+@pytest.mark.parametrize("low, high, days", [((4, 2), [10, 12, 11, 16, 11], -1),
+                                                 ([10, 12, 11, 16, 11], (4, 2), 0),
+                                                 ({1: 2, 3: 4}, 5, [2, 4, 6, 1]),
+                                                 ('jffkflоарблід', -1, 0),
+                                                 (4.5, 7, ' '),
+                                                 ('','','')])
+
 
 
 def test_max_afford_value_raise(low, high, days):

@@ -11,11 +11,11 @@ def test_descr_output(capsys):
     assert captured.out == 'You have finished working with the Fibonacci mod function\n'
 
 
-# def test_fibo_output6(capsys):
-#     """Test for function fibo(6)."""
-#     f_mod.fibo(6)
-#     captured = capsys.readouterr()
-#     assert captured.out == '4\n'
+def test_fibo_output6(capsys):
+    """Test for function fibo(6)."""
+    f_mod.fibo(6)
+    captured = capsys.readouterr()
+    assert captured.out == '4\n'
 #
 #
 # def test_fibo_output1(capsys):
@@ -36,9 +36,9 @@ def test_fibo_one():
     """Test of calculating fibonacci number when input is 1."""
     assert f_mod.fibo(1) == 1
 
-# def test_fibo_null():
-#     """Test of calculating fibonacci number when input is 0."""
-#     assert f_mod.fibo(0) == ''
+def test_fibo_null():
+    """Test of calculating fibonacci number when input is 0."""
+    assert f_mod.fibo(0) == None
 
 @pytest.mark.parametrize("inputs, outputs", [(1, 1), (2, 1), (3, 1), (4, 2), (5, 3), (6, 4), (7, 6), (8, 9), (17, 277)])
 def test_fibo_positive(inputs, outputs):
