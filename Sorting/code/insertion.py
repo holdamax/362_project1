@@ -17,7 +17,7 @@ def insertion_sort(array):
             print(array[i])
         return array
 
-    except (IndexError, ValueError, TypeError):
+    except (IndexError, ValueError, TypeError, AttributeError):
         print('Error. The values entered must be a integer numbers(etc. 12, 11, 13, 5, 6)')
 
 def descr():
