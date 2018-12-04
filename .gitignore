@@ -112,9 +112,4 @@ venv.bak/
 *.pyc
 *.pyc
 Dynamic_Programming/code/__pycache__/ways_to_sum.cpython-36.pyc
-Dynamic_Programming/code/__pycache__/ways_to_sum.cpython-36.pyc
-<<<<<<< HEAD
-Dynamic_Programming/code/__pycache__/ways_to_sum.cpython-36.pyc
-=======
 *.pyc
->>>>>>> master
