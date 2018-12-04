@@ -45,4 +45,10 @@ def descr():
         if inp_str == 'q':
             print("That's it.")
             return 'q'
+
         longest_pal(inp_str)
+
+
+if __name__ == '__main__':
+
+    descr()

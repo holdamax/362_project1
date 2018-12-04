@@ -1,16 +1,27 @@
 #!/usr/bin/env python
 """Find how many numbers we have with difference one in the sub sequence."""
 
+import os
+
+
+def cls():
+    """Clear screen."""
+    os.system('cls')
+
 
 def descr():
     """Entry point function for the menu app."""
+    cls()
     while True:
         in_list = input('\nPlease, input the list of positive integers, '
                         'which has to be checked (e.g. 3, 4, 7, 8, 9): ')
         if in_list == 'q':
             print('Bye')
             return in_list
-        longest_seq_with_diff_one(in_list)
+        elif in_list == 'c':
+            cls()
+        else:
+            longest_seq_with_diff_one(in_list)
 
 
 def longest_seq_with_diff_one(arr):
