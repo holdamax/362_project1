@@ -16,10 +16,12 @@ def yakobstelelement(num):
     elif num[0] == " ":
         print('Error. The values entered must be integer.')
         return 'Error. The values entered must be integer.'
-
+    elif num[0] == '-':
+        print('Error. The values entered must be Positive integer.')
+        return 'Error. The values entered must be Positive integer.'
     else:
-        print('Error. The values entered must be positive integer.')
-        return 'Error. The values entered must be positive integer.'
+        print('Error. The values entered must be integer!')
+        return 'Error. The values entered must be integer!'
 
 
 def descr():
