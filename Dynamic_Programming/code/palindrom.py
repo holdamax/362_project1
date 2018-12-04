@@ -35,7 +35,8 @@ def longest_pal(inp_str):
                 opt[i][j] = opt[i + 1][j - 1] + 2
             else:
                 opt[i][j] = max(opt[i][j - 1], opt[i + 1][j])
-
+    
+    print(opt[0][n - 1]) 
     return opt[0][n - 1]
 
 def descr():
