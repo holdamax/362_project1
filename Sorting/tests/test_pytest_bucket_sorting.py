@@ -1,4 +1,4 @@
-"""Tests for friend_pairs.py"""
+"""Tests for bucket_sorting.py"""
 
 import pytest
 from Sorting.code.bucket_sorting import bucket_sorting
@@ -21,9 +21,9 @@ def test_positive_paths_without_crossing(inputs, outputs):
                          [(['s', 'b', 'h'], ValueError),
                           ])
 def test_negative_paths_without_crossing(inputs, outputs):
-    """Tests for paths_without_crossing() function with negative values."""
+    """Tests for bucket_sorting() function with negative values."""
     assert bucket_sorting(inputs) == outputs
 
 def test_empty_paths_without_crossing():
-    """Tests for paths_without_crossing() function with empty values."""
+    """Tests for bucket_sorting() function with empty values."""
     assert bucket_sorting([]) == []

@@ -1,4 +1,4 @@
-"""Tests for friend_pairs.py"""
+"""Tests for paths_without_crossing.py"""
 
 import pytest
 from Dynamic_Programming.code.paths_without_crossing import paths_without_crossing as pwc
