@@ -1,2 +1,3 @@
 
-__all__ = ['insertion']
+__all__ = ['insertion',
+	'quick_sort']

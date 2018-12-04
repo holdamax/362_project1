@@ -36,9 +36,11 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
         if number_posts >= 0 and number_colors >= 0:
 
             if number_posts == 0:
+                print('0')
                 return 0
 
             if number_posts == 1:
+                print(number_colors)
                 return number_colors
 
             same = number_colors
@@ -49,9 +51,12 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
                 diff = (same + diff) * (number_colors - 1)
                 same = prev_diff
             print(same + diff)
+            return same + diff
 
-        return 'Please enter data like (posts, colors). E.g. (5,2)'
+        else:
+            print('Please enter data like (posts, colors). E.g. (5,2)')
     except TypeError:
-        print('Please enter positive integer > 0')
+        return 'Please enter positive integer > 0'
     except ValueError:
-        print('Please enter positive integer > 0')
+        return 'Please enter positive integer > 0'
+
