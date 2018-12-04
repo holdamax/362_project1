@@ -1,68 +1,46 @@
-"""Testing task 2
-Find which is the member of position n
- in Modification Fibonacci sequence."""
-
-import pytest
-from Dynamic_Programming.code.fibonacci_mod import fibo
-
-def test_func():
-    """Test of calculating fibonacci number with input 3."""
-    assert fibo(3) == 1
-
-def test_error():
-    """Test of raising exception."""
-    pytest.raises(TypeError, "fibo('wrong_value')")
-
-@pytest.mark.xfail(raises=RecursionError)
-def test_fail():
-    """Expected fail of test."""
-    fibo(-1)
-
-@pytest.mark.parametrize("fibo_number, fibo_value", [(1, 1), (2, 1), (5, 3), (10, 19), (15, 129)])
-def test_fibo(fibo_number, fibo_value):
-    """Test of calculating fibonacci number with different inputs."""
-    assert fibo(fibo_number) == fibo_value
-
-
-
-
-
-
-
-
 """PyTest for fibonacci_mod.py."""
 import pytest
 import Dynamic_Programming.code.fibonacci_mod as f_mod
 
 
 def test_descr_output(capsys):
-    """Test output of func descr when input is 'q'."""
-    f.input = lambda x: 'q'
-    f.descr()
+    """Test for function descr when input is 'q'."""
+    f_mod.input = lambda x: 'q'
+    f_mod.descr()
     captured = capsys.readouterr()
-    assert captured.out == 'You have finished working with the Fibonacci function\n'
-
-def test_fibord_output(capsys):
-    """Test output of func fibord(5)."""
-    f.fibord(5)
-    captured = capsys.readouterr()
-    assert captured.out == '8\n'
+    assert captured.out == 'You have finished working with the Fibonacci mod function\n'
 
 
-@pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
-@pytest.mark.parametrize("inputs", [(1, 2, 3, 4), [1, 2, 3, 4, 5], {1: 1, 2: 2}, 'hjbjbjb', -1, 2.4])
-def test_fibord_wrong_value_raise(inputs):
-    """test on wrong input type."""
-    f.fibord(inputs)
+# def test_fibo_output6(capsys):
+#     """Test for function fibo(6)."""
+#     f_mod.fibo(6)
+#     captured = capsys.readouterr()
+#     assert captured.out == '4\n'
+#
+#
+# def test_fibo_output1(capsys):
+#     """Test for function fibo(1)."""
+#     f_mod.fibo(1)
+#     captured = capsys.readouterr()
+#     assert captured.out == '1\n'
 
 
-def test_fibord_null():
-    """Test of calculating fibonacci number when input is 0."""
-    assert f.fibord(0) == 1
+@pytest.mark.xfail(raises=(TypeError, ValueError, RecursionError))
+@pytest.mark.parametrize("inputs", [(4, 2, 3, 4), [0, 2, 1, 6, 1], {1: 2, 3: 4}, 'jffkflоарблід', -1, 0, 4.5, ' ', ''])
+def test_fibo_wrong_value_raise(inputs):
+    """Test on wrong input type."""
+    f_mod.fibo(inputs)
 
 
-@pytest.mark.parametrize("inputs, outputs", [(1, 1), (2, 2), (3, 3), (4, 5), (5, 8), (24, 75025)])
-def test_fibord_positive(inputs, outputs):
+def test_fibo_one():
+    """Test of calculating fibonacci number when input is 1."""
+    assert f_mod.fibo(1) == 1
+
+# def test_fibo_null():
+#     """Test of calculating fibonacci number when input is 0."""
+#     assert f_mod.fibo(0) == ''
+
+@pytest.mark.parametrize("inputs, outputs", [(1, 1), (2, 1), (3, 1), (4, 2), (5, 3), (6, 4), (7, 6), (8, 9), (17, 277)])
+def test_fibo_positive(inputs, outputs):
     """Test of calculating fibonacci number with different inputs."""
-    assert f.fibord(inputs) == outputs
-
+    assert f_mod.fibo(inputs) == outputs
