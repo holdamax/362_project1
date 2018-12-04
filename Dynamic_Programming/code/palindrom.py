@@ -46,7 +46,7 @@ def descr():
             print("That's it.")
             return 'q'
 
-        longest_pal(str)
+        longest_pal(int_str)
 
 
 if __name__ == '__main__':
