@@ -9,6 +9,6 @@ from Dynamic_Programming.code.palindrom import longest_pal
 def test_func():
     """Test for positive results"""
     nose.tools.assert_equals(longest_pal(
-            '1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'),
+            'd'),
             19)
     nose.tools.assert_equals(longest_pal('0'), 1)
