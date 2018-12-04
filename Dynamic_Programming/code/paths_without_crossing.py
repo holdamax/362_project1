@@ -49,10 +49,10 @@ def paths_without_crossing(num):
                 return 0
             if not (num % 2) and num >= 2:
                 return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
-        print('You entered wrond value')
+        print('Error! You entered wrong value')
         return None
     except(AttributeError, TypeError):
-        print('You entered wrond type')
+        print('Error! You entered wrong value')
 
 
 
