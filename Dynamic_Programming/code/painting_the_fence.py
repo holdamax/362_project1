@@ -53,6 +53,9 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
     same[i]  = diff[i-1]
     diff[i]  = (diff[i-1] + diff[i-2]) * (k-1)= total[i-1] * (k-1)
     """
+    if not isinstance(number_posts, int) or not isinstance(number_colors, int):
+        raise TypeError('Please enter positive integer < 1000000')
+
     if 0 <= number_posts < 1000000 and 0 <= number_colors < 1000000:
 
         if number_posts == 0:
