@@ -14,6 +14,7 @@ def descr():
 sum of positive integers".format(number, count_ways(int(number))))
     except (TypeError, ValueError, IndexError):
         print('Please enter number like: 0 < integer number < 10000')
+    return None
 
 
 def count_ways(number: int):
@@ -24,7 +25,8 @@ def count_ways(number: int):
     manner using the base case (n = 0)
     Initialize all table values as 0
     """
-
+    if not isinstance(number, int):
+        raise TypeError('Please enter number like: 0 < integer number < 10000')
     if 10000 > number > 0:
         table = [0] * (number + 1)
         table[0] = 1
