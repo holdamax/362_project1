@@ -19,7 +19,6 @@ def test_longest_seq_with_diff_one(inputs, outputs):
 @pytest.mark.parametrize('inputs, outputs',
                          [('5,f,t', None),
                           ('Hi', None),
-                          ('', None),
                           (' ', None)])
 def test_longest_seq_with_diff_one(inputs, outputs):
     """Tests for negative results"""
