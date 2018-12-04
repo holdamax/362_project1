@@ -8,11 +8,34 @@ such that at most 2 adjacent posts have the same color
 
 def descr():
     """Function for to input and verification data"""
-    number_posts = input('Please enter a number of posts (e.g. 40): ')
-    number_colors = input('Please enter a number of colors (e.g. 40): ')
-    if number_posts == 'q' or number_colors == 'q':
+    number_posts = input('Please enter a number of posts (e.g. 10): ')
+
+    if number_posts == 'q':
         return 'q'
-    return ways_to_paint_fence(number_posts, number_colors)
+
+    try:
+        number_posts = int(number_posts)
+
+    except (TypeError, ValueError, IndexError):
+        print('Please enter positive integer > 0')
+        return None
+
+    number_colors = input('Please enter a number of colors (e.g. 5): ')
+
+    if number_colors == 'q':
+        return 'q'
+
+    try:
+        number_colors = int(number_colors)
+
+    except (TypeError, ValueError, IndexError):
+        print('Please enter positive integer > 0')
+        return None
+
+    print('There are {} ways to paint your fence \
+          '.format(ways_to_paint_fence(number_posts, number_colors)))
+
+    return None
 
 
 def ways_to_paint_fence(number_posts: int, number_colors: int):
@@ -31,8 +54,6 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
     diff[i]  = (diff[i-1] + diff[i-2]) * (k-1)= total[i-1] * (k-1)
     """
     try:
-        number_posts = int(number_posts)
-        number_colors = int(number_colors)
         if number_posts >= 0 and number_colors >= 0:
 
             if number_posts == 0:
@@ -48,10 +69,8 @@ def ways_to_paint_fence(number_posts: int, number_colors: int):
                 prev_diff = diff
                 diff = (same + diff) * (number_colors - 1)
                 same = prev_diff
-            print(same + diff)
+            return same + diff
 
-        return 'Please enter data like (posts, colors). E.g. (5,2)'
-    except TypeError:
-        print('Please enter positive integer > 0')
-    except ValueError:
-        print('Please enter positive integer > 0')
+        return 'Please enter positive integer > 0'
+    except (TypeError, ValueError, IndexError):
+        return 'Please enter positive integer > 0'
