@@ -8,7 +8,8 @@ def descr():
         return 'q'
     return ways_to_sum(my_list, number)
 
-def ways_to_sum(my_list=None, number=None):
+
+def ways_to_sum(my_list = None, number = None):
     """ Function to count the total
     number of ways to sum up to 'number'
     Keyword arguments:
