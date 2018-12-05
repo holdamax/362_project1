@@ -3,11 +3,14 @@ import pytest
 import Dynamic_Programming.code.ways_to_cover_in_3_steps as f
 
 
-@pytest.mark.parametrize("inputs, outputs", [((1, 2, 3, 4), None), ([1, 2, 3, 4, 5], None), ({1: 1, 2: 2}, None),
-                                             ('hjbjbjb', None), (-1, None)])
+@pytest.mark.parametrize("inputs, outputs", [(1, 2, 3, 4),
+                                             [1, 2, 3, 4, 5],
+                                             {1: 1, 2: 2},
+                                             'hjbjbjb',
+                                             -1])
 def test_count_ways_wrong_value_raise(inputs, outputs):
     """Test on wrong input type."""
-    assert f.count_ways(inputs) == outputs
+    assert f.count_ways(inputs) is None
 
 
 def test_count_ways_null():

@@ -30,7 +30,7 @@ def _factorial(num: int):
 def paths_without_crossing(num: (int, str)):
     """Count numbers of ways to connect num points on a circle.
 
-    : Parameters
+    Parameters
     ----------
     num : integer  number of points on a circle
 
@@ -43,7 +43,7 @@ def paths_without_crossing(num: (int, str)):
     num = int(num)
     if num == 1:
         return 0
-    if not (num % 2) and num >= 2:
+    if not (num % 2) and num > 1 and num <= 2000:
         return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
     raise ValueError
 
@@ -64,7 +64,7 @@ def descr():
         print('Error: Please enter an array')
         return None
     except ValueError:
-        print('Error: Please enter only integer, even values bigger then 0')
+        print('Error: Please enter only integer, even values in range from 2 to 2000')
         return None
 
 
