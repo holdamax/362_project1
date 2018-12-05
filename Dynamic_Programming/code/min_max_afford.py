@@ -10,7 +10,7 @@ def descr():
             print("Please input number of days and two lists of affords: ")
             days_in = input("Number of days: ")
             if days_in == 'q':
-                print('You have finished working with the Fibonacci mod function')
+                print('You have finished working with the Max Afford function')
                 return 'q'
             days_in = int(days_in)
             if days_in > 45:
@@ -33,14 +33,7 @@ def descr():
 
 def max_afford(low: list, high: list, days: int):
     """Calculate Max afford with given value of work by days."""
-    try:
-        if days <= 0:
-            return 0
-        if len(low) != days or len(high) != days:
-            raise IndexError
-        return max(high[days-1] + max_afford(low, high, (days-2)),
-                   low[days-1] + max_afford(low, high, (days-1)))
-    except (TypeError, ValueError):
-        print("Wrong inputs. Input only positive integer numbers.")
-    except IndexError:
-        print("Wrong inputs. Number of affords should be equal to number of days.")
+    if days <= 0:
+        return 0
+    return max(high[days-1] + max_afford(low, high, (days-2)),
+               low[days-1] + max_afford(low, high, (days-1)))

@@ -1,9 +1,9 @@
 
-__all__ = ['test_fibonacci',
+__all__ = ['test_pytest_fibonacci',
            'test_fibonacci_mod',
            'test_pytest_fibonacci_mod',
            'test_ways_to_sum',
-           'test_ways_to_cover_in_3_steps',
+           'test_pytest_ways_to_cover_in_3_steps',
            'test_min_max_afford',
            'test_pytest_min_max_afford',
            'test_longest_sequence',
@@ -14,4 +14,3 @@ __all__ = ['test_fibonacci',
            'test_nose_paths_without_crossing',
            'test_ways_to_write_n_as_sum_of_integers',
            'test_pytest_ways_to_sum']
-

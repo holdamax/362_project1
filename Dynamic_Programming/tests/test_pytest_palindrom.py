@@ -1,7 +1,7 @@
 """Test of palindrom.py"""
 
 import pytest
-from palindrom import longest_pal
+from Dynamic_Programming.code.palindrom import longest_pal
 
                                 
 def test_func():
