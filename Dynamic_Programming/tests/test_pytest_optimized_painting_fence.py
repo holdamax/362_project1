@@ -8,7 +8,7 @@ class TestPositive:
     def test_1_1(self):
         assert opf.find_combinations(1, 1) == 1
 
-    def test_1_1(self):
+    def test_13_14(self):
         assert opf.find_combinations(13, 14) == 752711352439774
 
     def test_99_99(self):
