@@ -14,7 +14,7 @@ def descr():
     cls()
     while True:
         in_list = input('\nPlease, input sequence of coma separated integers, '
-                        'which has to be checked (e.g. 3, 4, 7, 8, 9) or Q to exit ')
+                        'which has to be checked (e.g. 3, 4, 7, 8, 9) or Q to exit: ')
         if in_list == 'q':
             print('Bye')
             return in_list
@@ -31,7 +31,7 @@ def count_it(arr) ->int or str:
 
     Returns: Number, which represents the longest sequence of integers with difference one."""
     arr = sorted(arr)
-    print(f"Using list {arr}...")
+    print(f"\nUsing list {arr}...")
 
     num = len(arr)
     arr_1 = [1 for _ in range(len(arr))]

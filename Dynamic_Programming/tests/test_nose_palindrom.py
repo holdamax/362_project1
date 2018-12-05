@@ -11,5 +11,5 @@ def test_func():
     nose.tools.assert_equals(longest_pal(
             '1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'),
             19)
-    nose.tools.assert_equals(longest_pal('0'), 1)
-    nose.tools.assert_equals(longest_pal(''), ///)
+    assert longest_pal('0'), 1)
+    assert longest_pal(''), ///)
