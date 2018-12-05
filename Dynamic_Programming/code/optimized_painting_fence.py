@@ -49,6 +49,8 @@ def find_combinations(post: int, color: int):
         return 'Error! Please, enter positive numbers (etc. 2 and 3)'
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
 
-    descr()
+ #   descr()
+
+print(find_combinations(-1, 4))
