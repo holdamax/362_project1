@@ -1,5 +1,7 @@
 """Python3 implementation to count
 ways to sum up to a given value number"""
+
+
 def descr():
     """Function for to input and verification data"""
     my_list = input('Please, input the array which has to be represented (etc. 1,5,6): ')
