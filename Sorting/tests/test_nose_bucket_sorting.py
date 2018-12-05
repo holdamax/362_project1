@@ -1,7 +1,7 @@
 """Testing task .
-Paths without crossing"""
+Nose: Bucket sorting"""
 
-from Sorting.code.bucket_sorting import bucket_sorting, msBits
+from Sorting.code.bucket_sorting import bucket_sorting
 import nose
 
 @nose.tools.timed(0.02)
@@ -27,4 +27,5 @@ def test_func_negative():
 @nose.tools.timed(0.02)
 @nose.tools.raises(IndexError, TypeError)
 def test_raises_type_error():
+    """Test of raising exception."""
     raise TypeError('Please enter an array of integer numbers')

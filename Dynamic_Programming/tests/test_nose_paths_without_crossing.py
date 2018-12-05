@@ -1,5 +1,5 @@
 """Testing task .
-Paths without crossing"""
+Nose: Paths without crossing"""
 
 from Dynamic_Programming.code.paths_without_crossing import paths_without_crossing, _factorial
 import nose
@@ -30,12 +30,13 @@ def test_func_negative():
 @nose.tools.timed(0.02)
 @nose.tools.raises(AttributeError, TypeError)
 def test_raises_type_error():
+    """Test of raising exception."""
     raise TypeError('Error! You entered wrong value')
 
 ##############################################################
 @nose.tools.timed(0.02)
 def test_func_factorial():
-    """Test with given input 1."""
+    """Test with given input 0."""
     assert _factorial(0) == 1
 
 @nose.tools.timed(0.02)
@@ -56,4 +57,5 @@ def test_func_negative_factorial():
 @nose.tools.timed(0.02)
 @nose.tools.raises(TypeError)
 def test_raises_type_error_factorial():
+    """Test of raising exception."""
     raise TypeError('Wrong type')

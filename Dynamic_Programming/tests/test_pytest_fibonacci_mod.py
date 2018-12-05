@@ -11,18 +11,18 @@ def test_fibo_wrong_value_raise(inputs):
 
 
 @pytest.mark.xfail(raises=TypeError)
-def test_fail():
-    """Expected fail of test."""
+def test_fail1():
+    """Expected fail of test when input is 46."""
     f_mod.fibo(46)
 
 
 def test_fibo_o():
-    """Test of calculating fibonacci number when input is 1."""
+    """Expected None of test when input is 50."""
     assert f_mod.fibo(50) == None
 
 
-def test_fibo_null():
-    """Test of calculating fibonacci number when input is 0."""
+def test_fibo_fail2():
+    """Expected fail of test when input is 46."""
     f_mod.fibo(46)
     pytest.raises(ImportError)
 
