@@ -18,7 +18,7 @@ def descr():
     cls()
     while True:
         choice = input(
-            '\n>>> Please enter integer positive number of friends or X, if you want to exit: ')
+            '\n>>> Please enter integer positive number of friends or Q, if you want to exit: ')
         choice = choice.lower()
         if choice == 'q':
             print('Bye\n')

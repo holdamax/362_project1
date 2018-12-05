@@ -14,7 +14,7 @@ def descr():
     cls()
     while True:
         in_list = input('\nPlease, input sequence of coma separated integers, '
-                        'which has to be checked (e.g. 3, 4, 7, 8, 9): ')
+                        'which has to be checked (e.g. 3, 4, 7, 8, 9) or Q to exit ')
         if in_list == 'q':
             print('Bye')
             return in_list
@@ -47,29 +47,31 @@ def count_it(arr) ->int or str:
 
 def longest_seq_with_diff_one(arr: int or str, *args: int or str) -> int or str:
 
-    if arr == '':
+    if arr == '' or arr is None:
         print("Please enter correct input.")
         return "Please enter correct input."
     elif isinstance(arr, int):
-        lst = []
+        lst = list()
         lst.append(arr)
         for arg in args:
             if str(arg).isdigit():
                 lst.append(arg)
-        count_it(lst)
+        return count_it(lst)
     elif isinstance(arr, list):
         for arg in args:
             arr.append(arg)
-        count_it(arr)
+        return count_it(arr)
     elif isinstance(arr, str):
         try:
             arr = [int(i) for i in arr.split(',')]
-            count_it(arr)
+            return count_it(arr)
         except ValueError:
             print("Please enter correct input.")
             return "Please enter correct input."
 
 
 if __name__ == '__main__':
+    longest_seq_with_diff_one('h',-9,2,3,-5)
+    #descr()
 
-    descr()
+#Add check for None input
