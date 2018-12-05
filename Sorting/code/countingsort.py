@@ -3,12 +3,13 @@
 
 
 def counting_sort(data):
-    max_number = (max(data))
-    min_number = (min(data))
+    dat = data.split()
+    max_number = (max(dat))
+    min_number = (min(dat))
     n = max_number - min_number + 1
     # list for counters
     counters = [0] * n
-    for v in data:
+    for v in dat:
         counters[v - min_number] += 1
         #print(counters)
     result = []
@@ -18,7 +19,7 @@ def counting_sort(data):
         result.extend([count + min_number] * i)
     print(result)
     return result
-
+counting_sort('1,2,3,7')
 def descr():
     """Entry point function for the menu app."""
     while True:
