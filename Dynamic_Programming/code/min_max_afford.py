@@ -36,6 +36,8 @@ def max_afford(low: list, high: list, days: int):
     try:
         if days <= 0:
             return 0
+        if len(low) != days or len(high) != days:
+            raise IndexError
         return max(high[days-1] + max_afford(low, high, (days-2)),
                    low[days-1] + max_afford(low, high, (days-1)))
     except (TypeError, ValueError):
