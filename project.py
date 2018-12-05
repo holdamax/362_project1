@@ -23,7 +23,7 @@ TASKS = {'1': fibonacci,
          '16': countingsort,
          '17': quick_sort,
          '18': bucket_sorting,
-         #'19': merge
+         '19': merge_sort
          }
 
 CHOOSE = "Choose task: \n"\

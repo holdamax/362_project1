@@ -14,24 +14,24 @@ def descr():
         if alista == 'q':
             print('Bye')
             return 'q'
-        print(check1(alista))
+        print(check(alista))
 
 
-def check1(alist):
-
+def check(alist):
     """check inputs and call 'mergeSort' algorithm"""
 
     try:
         alist = [int(i) for i in alist.split(',')]
         sizealist = len(alist)
         print(f"Using list {alist}...")
-        return(mergesort_16(alist, sizealist))
+        return(mergesort(alist, sizealist))
+
 
     except(TypeError, ValueError):
         print("Please enter correct input.")
 
 
-def mergesort_16(alist, sizealist):
+def mergesort(alist, sizealist):
     """"
     "Merge Sort" algorithm
     """
@@ -42,8 +42,8 @@ def mergesort_16(alist, sizealist):
         if sizealist <= 16:
             print('Left: ', lefthalf, ' Rigt: ', righthalf)
 
-        mergesort_16(lefthalf, sizealist)
-        mergesort_16(righthalf, sizealist)
+        mergesort(lefthalf, sizealist)
+        mergesort(righthalf, sizealist)
         i = j = k = 0
 
         while i < len(lefthalf) and j < len(righthalf):
