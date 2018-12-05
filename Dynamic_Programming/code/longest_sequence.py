@@ -71,7 +71,5 @@ def longest_seq_with_diff_one(arr: int or str, *args: int or str) -> int or str:
 
 
 if __name__ == '__main__':
-    longest_seq_with_diff_one('h',-9,2,3,-5)
-    #descr()
 
-#Add check for None input
+    descr()
