@@ -16,13 +16,13 @@ def test_positive_paths_without_crossing(inputs, outputs):
     assert bucket_sorting(inputs) == outputs
 
 
-@pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
+# @pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
 @pytest.mark.parametrize('inputs, outputs',
-                         [(['s', 'b', 'h'], ValueError),
-                          ])
+                         [(['s', 'b', 'h'], TypeError), ([4.5, 2.7, 1.7], ValueError)])
 def test_negative_paths_without_crossing(inputs, outputs):
     """Tests for bucket_sorting() function with negative values."""
-    assert bucket_sorting(inputs) == outputs
+    with pytest.raises(outputs):
+        bucket_sorting(inputs)
 
 def test_empty_paths_without_crossing():
     """Tests for bucket_sorting() function with empty values."""

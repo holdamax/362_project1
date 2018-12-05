@@ -16,18 +16,20 @@ def test_positive_paths_without_crossing(inputs, outputs):
     """Tests for paths_without_crossing() function with positive values."""
     assert pwc(inputs) == outputs
 
-@pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
+
+# @pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
 @pytest.mark.parametrize('inputs, outputs',
-                         [('3', 'Error! You entered wrong value'),
-                          ('7', 'Error! You entered wrong value'),
-                          ('5', 'Error! You entered wrong value'),
-                          ('-8', 'Error! You entered wrong value'),
-                          ('-1000342', 'Error! You entered wrong value'),
-                          ('0', 'Error! You entered wrong value'),])
+                         [('3', ValueError),
+                          ('7', ValueError),
+                          ('-8', ValueError),
+                          ('saffs', TypeError),
+                          ('0', ValueError),])
 def test_negative_paths_without_crossing(inputs, outputs):
     """Tests for paths_without_crossing() function with negative values."""
-    assert pwc(inputs) == outputs
+    with pytest.raises(outputs):
+        pwc(inputs)
+
 
 def test_empty_paths_without_crossing():
     """Tests for paths_without_crossing() function with empty values."""
-    assert pwc('') == 'Error! You entered wrong value'
+    assert pwc('') == ValueError
