@@ -7,7 +7,7 @@ Take integer, even, positive number
 """
 
 
-def _factorial(num):
+def _factorial(num: int):
     """
     Count factorial from num.
 
@@ -29,7 +29,7 @@ def _factorial(num):
         print('Wrong type')
 
 
-def paths_without_crossing(num):
+def paths_without_crossing(num: int):
     """Count numbers of ways to connect num points on a circle.
 
     : Parameters
@@ -42,18 +42,15 @@ def paths_without_crossing(num):
         total number of ways to connect num points on a circle without crossing.
 
     """
-    try:
-        if isinstance(num, int) or num.isdigit():
-            num = int(num)
-            if num == 1:
-                return 0
-            if not (num % 2) and num >= 2:
-                return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
-        print('Error! You entered wrong value')
-        return None
-    except(AttributeError, TypeError):
-        print('Error! You entered wrong value')
-
+    #if num.isdigit():
+    num = int(num)
+    if num == 1:
+        return 0
+    elif not (num % 2) and num >= 2:
+        return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
+    raise ValueError
+        # raise ValueError('Error! You entered wrong value')
+    # raise TypeError('Error! You entered wrong value')
 
 
 def descr():
@@ -67,14 +64,24 @@ def descr():
     int
     None
     """
+    # while True:
     inpt = input('\nPlease enter positive even number'
                  ' even and integer\n'
-                 'Or \'q\' to back to the menu ... ')
+                 'Or \'q\' to back to the menu ... \n')
     if inpt.lower() == 'q':
+        print('You have finished working with the searching count ways to connect num points on a circle')
         return 'q'
-    result = paths_without_crossing(inpt)
-    print(result)
-    return result
+    try:
+        result = paths_without_crossing(inpt)
+        print(result)
+    except AttributeError:
+        print('Error: Please enter an array')
+        return None
+    except TypeError:
+        return None
+    except ValueError:
+        print('Error: Please enter only integer, even values bigger then 0')
+        return None
 
 
 if __name__ == '__main__':

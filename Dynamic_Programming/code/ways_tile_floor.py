@@ -17,6 +17,7 @@ def descr():
 
 
 
+
 def ways_tile_floor(n_size, m_size):
     """ Function to count the total
         number of ways to sum up to 'number'
