@@ -16,6 +16,7 @@ def descr():
         print('Error! Please, enter correct size >= 0 (etc. 2 and 3)')
 
 
+
 def ways_tile_floor(n_size, m_size):
     """ Function to count the total
         number of ways to sum up to 'number'

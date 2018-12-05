@@ -16,7 +16,6 @@ def test_positive_paths_without_crossing(inputs, outputs):
     assert bucket_sorting(inputs) == outputs
 
 
-# @pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
 @pytest.mark.parametrize('inputs, outputs',
                          [(['s', 'b', 'h'], TypeError), ([4.5, 2.7, 1.7], ValueError)])
 def test_negative_paths_without_crossing(inputs, outputs):
