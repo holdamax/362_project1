@@ -7,7 +7,7 @@ Take integer, even, positive number
 """
 
 
-def _factorial(num):
+def _factorial(num: int):
     """
     Count factorial from num.
 
@@ -29,7 +29,7 @@ def _factorial(num):
         print('Wrong type')
 
 
-def paths_without_crossing(num):
+def paths_without_crossing(num: int):
     """Count numbers of ways to connect num points on a circle.
 
     : Parameters
@@ -42,14 +42,12 @@ def paths_without_crossing(num):
         total number of ways to connect num points on a circle without crossing.
 
     """
+    #if num.isdigit():
+    num = int(num)
     if num == 1:
         return 0
-    if num.isdigit():
-        num = int(num)
-        if num == 1:
-            return 0
-        elif not (num % 2) and num >= 2:
-            return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
+    elif not (num % 2) and num >= 2:
+        return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
         # raise ValueError('Error! You entered wrong value')
     # raise TypeError('Error! You entered wrong value')
     return 'Error! You entered wrong value'
@@ -85,4 +83,3 @@ def descr():
 
 if __name__ == '__main__':
     descr()
-    print([0] * (8 + 2))

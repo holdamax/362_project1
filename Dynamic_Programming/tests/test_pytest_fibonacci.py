@@ -13,9 +13,11 @@ def test_fibord_null():
     """Test of calculating fibonacci number when input is 0."""
     assert f.fibord(0) == 1
 
+
 def test_fibord_negative():
     """Test of calculating fibonacci number when input is negative number."""
-    assert f.fibord(-4) == None
+    assert f.fibord(-4) is None
+
 
 @pytest.mark.parametrize("inputs, outputs", [(1, 1), (2, 2), (3, 3), (4, 5), (5, 8), (24, 75025)])
 def test_fibord_positive(inputs, outputs):
