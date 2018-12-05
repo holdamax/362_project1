@@ -8,25 +8,20 @@ def descr():
     """Description function for checking inputs"""
     while True:
         try:
-            size = input("Please input position of fibonacci number: ")
+            size = input("Please input position of fibonacci number in range from 0 to 45.")
             if size == 'q':
-                print('You have finished working with the Fibonacci mod function')
+                print("You have finished working with the Fibonacci mod function")
                 return 'q'
             print(fibo(int(size)))
         except (TypeError, ValueError, RecursionError):
-            print("Wrong inputs. Input one positive integer number.")
+            print("Wrong inputs. Input one positive integer number in range from 0 to 45.")
 
 
 def fibo(size: int):
     """Calculate Modified Fibonacci number."""
-    try:
-        if size <= 0:
-            raise RecursionError
-        if size > 45 or size <= 0:
-            print("Wrong inputs. Input one positive integer number.")
-            return None
-        if size in (1, 2, 3):
-            return 1
-        return fibo(size-1) + fibo(size-3)
-    except (TypeError, ValueError, RecursionError):
-        print("Wrong inputs. Input one positive integer number.")
+    if size > 45:
+        print("Wrong inputs. Calculating will take too much time, input number in range from 0 to 45.")
+        return None
+    if size in (1, 2, 3):
+        return 1
+    return fibo(size-1) + fibo(size-3)
