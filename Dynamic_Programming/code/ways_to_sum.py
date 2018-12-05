@@ -12,7 +12,7 @@ def descr():
         print("Total number of ways = {}".format(ways_to_sum(my_list, number)))
         return None
     except (TypeError, ValueError, TypeError):
-        print('Error! Please, enter correct list with positive numbers and number > 0 (etc. 1,5,6 and 7)')
+        print('Error! Please, enter correct list with positive numbers and number > 0 and < 1000 (etc. 1,5,6 and 7)')
 
 
 def ways_to_sum(my_list=None, number=None):
@@ -24,8 +24,7 @@ def ways_to_sum(my_list=None, number=None):
 
     number = int(number)
     if number == 0 or len(str(number)) > 3:
-        print('Error! Please, enter correct number > 0 (etc. 7)')
-        return 0
+        raise ValueError
     my_list = [int(i) for i in my_list.split(',')]
     count = [0 for i in range(number + 1)]
     count[0] = 1
