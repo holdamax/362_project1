@@ -192,7 +192,7 @@ argument-naming-style=snake_case
 
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style.
-argument-rgx=([a-z]+)(_[a-z0-9])*                                               # added regex check
+#argument-rgx=([a-z]+)(_[a-z0-9])*                                               # added regex check
 
 # Naming style matching correct attribute names.
 attr-naming-style=snake_case
@@ -264,7 +264,7 @@ method-naming-style=snake_case
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style.
-method-rgx=([a-z]+)(_[a-z0-9])*                                              # added regex check
+#method-rgx=([a-z]+)(_[a-z0-9])*                                              # added regex check
 
 
 # Naming style matching correct module names.
@@ -272,7 +272,7 @@ module-naming-style=snake_case
 
 # Regular expression matching correct module names. Overrides module-naming-
 # style.
-module-rgx=([a-z]+)(_[a-z0-9])*                                              # added regex check
+#module-rgx=([a-z]+)(_[a-z0-9])*                                              # added regex check
 
 # Colon-delimited sets of names that determine each other's naming style when
 # the name regexes allow several styles.
@@ -292,7 +292,7 @@ variable-naming-style=snake_case
 
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style.
-variable-rgx=([a-z]+)(_[a-z0-9])*                                           # added regex check
+#variable-rgx=([a-z]+)(_[a-z0-9])*                                           # added regex check
 
 [FORMAT]
 
