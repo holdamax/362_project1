@@ -18,7 +18,7 @@ def descr():
         if in_list == 'q':
             print('Bye')
             return in_list
-        elif in_list == 'c':
+        if in_list == 'c':
             cls()
         else:
             longest_seq_with_diff_one(in_list)
@@ -46,22 +46,22 @@ def count_it(arr) ->int or str:
 
 
 def longest_seq_with_diff_one(arr: int or str, *args: int or str) -> int or str:
-
+    """Check for incorrect input data."""
     if arr == '' or arr is None:
         print("Please enter correct input.")
         return "Please enter correct input."
-    elif isinstance(arr, int):
+    if isinstance(arr, int):
         lst = list()
         lst.append(arr)
         for arg in args:
             if str(arg).isdigit():
                 lst.append(arg)
         return count_it(lst)
-    elif isinstance(arr, list):
+    if isinstance(arr, list):
         for arg in args:
             arr.append(arg)
         return count_it(arr)
-    elif isinstance(arr, str):
+    if isinstance(arr, str):
         try:
             arr = [int(i) for i in arr.split(',')]
             return count_it(arr)
