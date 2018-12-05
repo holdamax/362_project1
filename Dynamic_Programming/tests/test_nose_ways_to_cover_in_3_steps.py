@@ -2,7 +2,7 @@
 Ways to cover in 3 steps."""
 
 
-from ways_to_cover_in_3_steps import count_ways
+from Dynamic_Programming.code.ways_to_cover_in_3_steps import count_ways
 import nose
 
 
