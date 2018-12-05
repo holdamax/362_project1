@@ -8,12 +8,11 @@ Please write first argument - number of posts, second argumet - number of colors
 
 def descr():
     """Function for to input and verification data"""
-    while True:
-        posts = input('Please, input number of posts: ')
-        colors = input('Please, input number of colors: ')
-        if posts == 'q' or colors == 'q':
-            return 'q'
-        print(find_combinations(posts, colors))
+    posts = input('Please, input number of posts: ')
+    colors = input('Please, input number of colors: ')
+    if posts == 'q' or colors == 'q':
+        return 'q'
+    print(find_combinations(posts, colors))
 
 
 def find_combinations(post: int, color: int):
@@ -29,7 +28,7 @@ def find_combinations(post: int, color: int):
         diff = same * (color - 1)
         i = 3
         if post > 99 or color > 99:
-            return "sorry\n not\ntoday"
+            return "please, choose lesser numm"
         if post <= 0 or color <= 0:
             raise TypeError
 
@@ -47,7 +46,7 @@ def find_combinations(post: int, color: int):
         return same + diff
 
     except (TypeError, ValueError):
-        return 'Error! Please, enter correct size (etc. 2 and 3)'
+        return 'Error! Please, enter positive numbers (etc. 2 and 3)'
 
 
 if __name__ == '__main__':
