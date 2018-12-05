@@ -1,7 +1,6 @@
 """Testing task .
 Ways to cover in 3 steps."""
 
-
 from Dynamic_Programming.code.ways_to_cover_in_3_steps import count_ways
 import nose
 
