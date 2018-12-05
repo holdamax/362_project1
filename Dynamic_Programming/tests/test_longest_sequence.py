@@ -4,6 +4,7 @@
 import pytest
 from Dynamic_Programming.code import longest_sequence as ls
 
+
 def test_longest_seq_with_diff_one_negative():
     """Tests for negative results"""
     assert ls.longest_seq_with_diff_one('h',-9,2,3,-5) == "Please enter correct input."
@@ -17,4 +18,3 @@ def test_longest_seq_with_diff_one_negative():
 def test_longest_seq_with_diff_one_positive(inputs, outputs):
     """Tests for positive results"""
     assert ls.longest_seq_with_diff_one(inputs) == outputs
-
