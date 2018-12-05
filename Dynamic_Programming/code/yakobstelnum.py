@@ -9,19 +9,10 @@ def yakobstelelement(num):
         if num < 1000:
             print(int((2**num-(-1)**num)/3))
             return int((2**num-(-1)**num)/3)
-        else:
-            print('Error. The values entered is to large.')
-            return 'Error. The values entered is to large.'
-
-    elif num[0] == " ":
-        print('Error. The values entered must be integer.')
-        return 'Error. The values entered must be integer.'
-    elif num[0] == '-':
-        print('Error. The values entered must be Positive integer.')
-        return 'Error. The values entered must be Positive integer.'
-    else:
-        print('Error. The values entered must be integer!')
-        return 'Error. The values entered must be integer!'
+        print('Error. The values entered are to large.')
+        return 'Error. The values entered are to large.'
+    print('Error. The values entered must be Positive integer.')
+    return 'Error. The values entered must be Positive integer.'
 
 
 def descr():
