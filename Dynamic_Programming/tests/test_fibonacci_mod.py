@@ -3,7 +3,7 @@ Find which is the member of position n
  in Modification Fibonacci sequence."""
 
 
-from fibonacci_mod import fibo
+from Dynamic_Programming.code.fibonacci_mod import fibo
 import pytest
 
 
