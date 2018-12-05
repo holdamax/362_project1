@@ -1,6 +1,8 @@
 """Python implementation to
 count number of ways to tile a floor
 of size n x m using 1 x m tiles"""
+
+
 def descr():
     """Function for to input and verification data"""
     n_size = input('Please, input the n size floor > 0 (etc. 2): ')
@@ -16,6 +18,7 @@ def descr():
         print('Error! Please, enter correct size (etc. 2 and 3)')
     except IndexError:
         print('Error! Please, enter correct size (etc. 2 and 3)')
+
 
 def ways_tile_floor(n_size, m_size):
     """ Function to count the number of ways to tile the given floor using 1 x m tiles.
