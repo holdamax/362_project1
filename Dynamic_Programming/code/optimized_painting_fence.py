@@ -52,3 +52,4 @@ def find_combinations(post: int, color: int):
 if __name__ == '__main__':
 
     descr()
+
