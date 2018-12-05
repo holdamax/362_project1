@@ -1,6 +1,6 @@
 """Testing task 9.
 Work to be with High-effort or with Low-effort."""
-from min_max_afford import max_afford
+from Dynamic_Programming.code.min_max_afford import max_afford
 import pytest
 
 
