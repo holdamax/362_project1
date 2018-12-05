@@ -6,14 +6,14 @@ from Sorting.code import *
 
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
-         '3': yakobstelnum,
+         #'3': yakobstelnum,
          '4': longest_sequence,
          #'5': ways_to_sum,              add init to your func
          #'6': pass,              add
          '7': ways_to_cover_in_3_steps,
          '8': paths_without_crossing,
          '9': min_max_afford,
-         '10': palindrom,
+         #'10': palindrom,
          '11': friend_pairs,
          #'12': pass,                   add
          #'13': pass,                   add

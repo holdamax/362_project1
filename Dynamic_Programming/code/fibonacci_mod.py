@@ -22,8 +22,8 @@ def fibo(size: int):
     try:
         if size <= 0:
             raise RecursionError
-        if size > 45:
-            print("Sorry, number is too big. Calculating will take too much time.")
+        if size > 45 or size <= 0:
+            print("Wrong inputs. Input one positive integer number.")
             return None
         if size in (1, 2, 3):
             return 1
