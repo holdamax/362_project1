@@ -3,14 +3,17 @@
 
 
 def counting_sort(data):
-    max_number = (max(data))
-    min_number = (min(data))
+
+    member_list=[]
+    for i in data.split(','):
+        member_list.append(int(i))
+    max_number = (max(member_list))
+    min_number = (min(member_list))
     n = max_number - min_number + 1
     # list for counters
     counters = [0] * n
-    for v in data:
+    for v in member_list:
         counters[v - min_number] += 1
-        #print(counters)
     result = []
     count = -1
     for i in counters:
@@ -22,7 +25,7 @@ def counting_sort(data):
 def descr():
     """Entry point function for the menu app."""
     while True:
-        data = input("Please type list of integers in format [1,37,3,8] and i sort it:")
+        data = input("Please type list of integers and i sort it:")
         if data == 'q':
             print("That's it.")
             return 'q'
