@@ -18,7 +18,6 @@ def descr():
 
 
 def check(alist):
-
     """check inputs and call 'mergeSort' algorithm"""
 
     try:
@@ -26,6 +25,7 @@ def check(alist):
         sizealist = len(alist)
         print(f"Using list {alist}...")
         return(mergesort(alist, sizealist))
+
 
     except(TypeError, ValueError):
         print("Please enter correct input.")
