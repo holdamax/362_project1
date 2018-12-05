@@ -11,4 +11,6 @@ __all__ = ['test_pytest_fibonacci',
            'test_nose_paths_without_crossing',
            'test_ways_to_write_n_as_sum_of_integers',
            'test_pytest_ways_to_sum',
-           'test_nose_yakobstelnum']
+           'test_nose_yakobstelnum',
+           'test_nose_palindrom',
+           'test_pytest_optimized_painting_fence']
