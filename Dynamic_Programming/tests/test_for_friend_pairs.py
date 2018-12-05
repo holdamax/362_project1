@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-"""Tests for friend_pairs.py by Serge Kutwicki"""
+"""Testing friend_pairs"""
 
 import pytest
 
@@ -7,9 +6,9 @@ from Dynamic_Programming.code import friend_pairs
 
 
 @pytest.mark.parametrize('inputs, outputs',
-                         [('3', 4),
-                          ('5', 26),
-                          ('64', 135041388282796985771272553475002706667235246080),
+                         [('0', 0),
+                          ('3', 4),
+                          ('10', 9496),
                           ])
 def test_itr(inputs, outputs):
     """Tests for positive results"""
@@ -17,8 +16,10 @@ def test_itr(inputs, outputs):
 
 
 @pytest.mark.parametrize('inputs, outputs',
-                         [('-9', None),
-                          ('Yo', None)])
+                         [('-5', "You gave wrong input. Try again."),
+                          ('five', "You gave wrong input. Try again."),
+                          ('', "You gave wrong input. Try again.),
+                          (' ', "You gave wrong input. Try again.)])
 def test_itr(inputs, outputs):
     """Tests for negative results"""
     assert friend_pairs.itr(inputs) == outputs

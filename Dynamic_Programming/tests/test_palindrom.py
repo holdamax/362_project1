@@ -5,7 +5,7 @@ over intervals within the string. We define the value Opt[i,j]
 import pytest
 from palindrom import longest_pal
 
-                                
+
 def test_func():
     """Test of calculating palindrom number with input 'banana'"""
     assert longest_pal('banana') == 5
