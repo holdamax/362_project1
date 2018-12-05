@@ -9,6 +9,8 @@ returns number (of type int) of bucket to put this element.
 
 Use "Bucket Sort" to sort all buckets.
 """
+
+
 def bucket_sorting(lst):
     if isinstance(lst, list):
         buckets = list()
@@ -50,7 +52,6 @@ def msBits(lst, item):
         print('Type error')
 
 
-
 def descr():
     """
     Input list
@@ -62,12 +63,14 @@ def descr():
                  'Or \'q\' to back to the menu ... ')
     if inpt.lower() == 'q':
         return 'q'
+    try:
+        inpt = inpt.split()
+        lst = list(map(int,inpt))
+        result = bucket_sorting(lst)
+        print(result)
 
-    inpt = inpt.split()
-    lst = list(map(int,inpt))
-    result = bucket_sorting(lst)
-    print(result)
-    return result
+    except TypeError:
+        return None
 
 
 if __name__ == '__main__':

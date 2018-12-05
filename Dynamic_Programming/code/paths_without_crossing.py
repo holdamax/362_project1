@@ -42,17 +42,19 @@ def paths_without_crossing(num):
         total number of ways to connect num points on a circle without crossing.
 
     """
-    try:
-        if isinstance(num, int) or num.isdigit():
-            num = int(num)
-            if num == 1:
-                return 0
-            if not (num % 2) and num >= 2:
-                return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
-        print('Error! You entered wrong value')
-        return None
-    except(AttributeError, TypeError):
-        print('Error! You entered wrong value')
+    if num == 1:
+        return 0
+    if num.isdigit():
+        num = int(num)
+        if num == 1:
+            return 0
+        elif not (num % 2) and num >= 2:
+            return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
+        # raise ValueError('Error! You entered wrong value')
+    # raise TypeError('Error! You entered wrong value')
+    return 'Error! You entered wrong value'
+
+
 
 
 
@@ -67,15 +69,20 @@ def descr():
     int
     None
     """
+    # while True:
     inpt = input('\nPlease enter positive even number'
                  ' even and integer\n'
-                 'Or \'q\' to back to the menu ... ')
+                 'Or \'q\' to back to the menu ... \n')
     if inpt.lower() == 'q':
+        print('You have finished working with the searching count ways to connect num points on a circle')
         return 'q'
-    result = paths_without_crossing(inpt)
-    print(result)
-    return result
+    try:
+        result = paths_without_crossing(inpt)
+        print(result)
+    except (TypeError, AttributeError, ValueError):
+        return None
 
 
 if __name__ == '__main__':
     descr()
+    print([0] * (8 + 2))

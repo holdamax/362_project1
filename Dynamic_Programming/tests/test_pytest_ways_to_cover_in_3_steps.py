@@ -3,11 +3,11 @@ import pytest
 import Dynamic_Programming.code.ways_to_cover_in_3_steps as f
 
 
-@pytest.mark.xfail(raises=(TypeError, ValueError, IndexError, AttributeError))
-@pytest.mark.parametrize("inputs", [(1, 2, 3, 4), [1, 2, 3, 4, 5], {1: 1, 2: 2}, 'hjbjbjb', -1, 2.4])
-def test_count_ways_wrong_value_raise(inputs):
+@pytest.mark.parametrize("inputs, outputs", [((1, 2, 3, 4), None), ([1, 2, 3, 4, 5], None), ({1: 1, 2: 2}, None),
+                                             ('hjbjbjb', None), (-1, None)])
+def test_count_ways_wrong_value_raise(inputs, outputs):
     """Test on wrong input type."""
-    f.count_ways(inputs)
+    assert f.count_ways(inputs) == outputs
 
 
 def test_count_ways_null():
