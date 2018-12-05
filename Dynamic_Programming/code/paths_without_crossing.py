@@ -48,12 +48,9 @@ def paths_without_crossing(num: int):
         return 0
     elif not (num % 2) and num >= 2:
         return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
+    raise ValueError
         # raise ValueError('Error! You entered wrong value')
     # raise TypeError('Error! You entered wrong value')
-    return 'Error! You entered wrong value'
-
-
-
 
 
 def descr():
@@ -77,7 +74,13 @@ def descr():
     try:
         result = paths_without_crossing(inpt)
         print(result)
-    except (TypeError, AttributeError, ValueError):
+    except AttributeError:
+        print('Error: Please enter an array')
+        return None
+    except TypeError:
+        return None
+    except ValueError:
+        print('Error: Please enter only integer, even values bigger then 0')
         return None
 
 

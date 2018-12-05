@@ -15,7 +15,7 @@ def test_typeerror():
 def test_valerror():
     pytest.raises(ValueError)
 
-def test_штвerror():
+def test_error():
     pytest.raises(IndexError)
 
 @pytest.mark.parametrize("number_of_posts, value", [(5, 6),

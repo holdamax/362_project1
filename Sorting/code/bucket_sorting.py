@@ -1,4 +1,3 @@
-import random
 """
 Task: write the function bucketSort which sorts an array using "Bucket Sort" algorithm and the function msBits.
 The function bucketSort takes an array (of type integer slice, []int) as first input value and 
@@ -11,29 +10,33 @@ Use "Bucket Sort" to sort all buckets.
 """
 
 
-def bucket_sorting(lst):
-    if isinstance(lst, list):
-        buckets = list()
-        result = list()
-        for bucket in range(len(lst)):
-            buckets.append(list())
-        i = 1
-        for item in lst:
-            num_bucket = msBits(lst, item)
-        #     num_bucket = int(((item - min_value) / (max_value - min_value + 1)) * len(lst))
-            if ([item] in buckets) and (lst.count(item) == len(lst)):
-                buckets[num_bucket + i].append(item)
-                i += 1
-            else:
-                 buckets[num_bucket].append(item)
+def bucket_sorting(lst: list):
+    """
 
-        for bucket in buckets:
-            if len(bucket) > 1:
-                result.extend(bucket_sorting(bucket))
-            elif len(bucket) == 1:
-                result.extend(bucket)
-        return result
-    print('Please enter an array of integer numbers')
+    :param lst:
+    :return:
+    """
+    buckets = list()
+    result = list()
+    lst = list(map(int, lst.split()))
+    for bucket in range(len(lst)):
+        buckets.append(list())
+    i = 1
+    for item in lst:
+        num_bucket = msBits(lst, item)
+        if ([item] in buckets) and (lst.count(item) == len(lst)):
+            buckets[num_bucket + i].append(item)
+            i += 1
+        else:
+             buckets[num_bucket].append(item)
+
+    for bucket in buckets:
+        if len(bucket) > 1:
+            result.extend(bucket_sorting(bucket))
+        elif len(bucket) == 1:
+            result.extend(bucket)
+    return result
+
 
 def msBits(lst, item):
     """
@@ -42,14 +45,10 @@ def msBits(lst, item):
     :param item: Integer value from lst
     :return: Integer number ob bucket
     """
-    try:
-        if item in lst:
-            max_value = max(lst)
-            min_value = min(lst)
-            return int(((item - min_value) / (max_value - min_value + 1)) * len(lst))
-        print('value should be in the list')
-    except TypeError:
-        print('Type error')
+    max_value = max(lst)
+    min_value = min(lst)
+    return int(((item - min_value) / (max_value - min_value + 1)) * len(lst))
+
 
 
 def descr():
@@ -57,19 +56,20 @@ def descr():
     Input list
     Calls paths_without_crossing function
     :Returns:
-    Sorted list
     """
     inpt = input('\nPlease enter array in format \"1 3 4 5 6 33 44"...\n'
                  'Or \'q\' to back to the menu ... ')
     if inpt.lower() == 'q':
         return 'q'
     try:
-        inpt = inpt.split()
-        lst = list(map(int, inpt))
-        result = bucket_sorting(lst)
+        result = bucket_sorting(inpt)
         print(result)
 
     except TypeError:
+        print('Error: Please enter an array')
+        return None
+    except ValueError:
+        print('Error: Please enter only integer values')
         return None
 
 

@@ -3,5 +3,5 @@ __all__ = ['insertion',
 		   'countingsort',
 		   'quick_sort',
 		   'bucket_sorting',
-		   #'merge',
+		   'merge_sort',
 		   'quick_sort']
