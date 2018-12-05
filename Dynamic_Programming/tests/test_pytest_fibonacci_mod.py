@@ -22,10 +22,10 @@ import Dynamic_Programming.code.fibonacci_mod as f_mod
 
 
 
-#@pytest.mark.parametrize("inputs, outputs", [(1, 1), (3, 1), (4, 2), (6, 4), (17, 277), (45, 12322413)])
-#def test_fibo_positive(inputs, outputs):
- #   """Test of calculating fibonacci number with different inputs."""
-  #  assert f_mod.fibo(inputs) == outputs
+@pytest.mark.parametrize("inputs, outputs", [(1, 1), (3, 1), (4, 2), (6, 4), (17, 277), (45, 12322413)])
+def test_fibo_positive(inputs, outputs):
+   """Test of calculating fibonacci number with different inputs."""
+   assert f_mod.fibo(inputs) == outputs
 
 
 # @pytest.mark.parametrize("inputs, outputs", [(0, None), (-1, None), (-3, None), (-15, None)])
@@ -39,10 +39,10 @@ def test_fibo_negative(inputs):
     assert f_mod.fibo(inputs) is None
 
 
-# def test_error():
-#     """Test of raising exception."""
-#     pytest.raises(TypeError, f_mod.fibo(888))
-#
+def test_error():
+    """Test of raising exception."""
+    pytest.raises(TypeError, f_mod.fibo(888))
+
 # def test_err():
 #     """Test of raising exception."""
 #     pytest.raises(RecursionError, f_mod.fibo(-1))
