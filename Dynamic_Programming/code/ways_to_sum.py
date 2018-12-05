@@ -23,7 +23,7 @@ def ways_to_sum(my_list=None, number=None):
             number -- the number which has to be represented (default None)"""
 
     number = int(number)
-    if number == 0:
+    if number == 0 or len(str(number)) > 3:
         print('Error! Please, enter correct number > 0 (etc. 7)')
         return 0
     my_list = [int(i) for i in my_list.split(',')]

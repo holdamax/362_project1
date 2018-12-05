@@ -21,7 +21,7 @@ def test_positive_paths_without_crossing(inputs, outputs):
                          [('3', ValueError),
                           ('7', ValueError),
                           ('-8', ValueError),
-                          ('saffs', TypeError),
+                          ('saffs', ValueError),
                           ('0', ValueError),])
 def test_negative_paths_without_crossing(inputs, outputs):
     """Tests for paths_without_crossing() function with negative values."""
@@ -31,4 +31,5 @@ def test_negative_paths_without_crossing(inputs, outputs):
 
 def test_empty_paths_without_crossing():
     """Tests for paths_without_crossing() function with empty values."""
-    assert pwc('') == ValueError
+    with pytest.raises(ValueError):
+        pwc('')

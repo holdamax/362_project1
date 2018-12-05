@@ -1,5 +1,6 @@
 """Tests for bucket_sorting.py"""
 
+import random
 import pytest
 from Sorting.code.bucket_sorting import bucket_sorting
 
@@ -16,12 +17,21 @@ def test_positive_paths_without_crossing(inputs, outputs):
     assert bucket_sorting(inputs) == outputs
 
 
+@pytest.mark.parametrize('inputs',
+                         [([random.randint(-1000, 1000) for i in range(random.randint(1, 100))])])
+def test_random_paths_without_crossing(inputs):
+    """Tests for bucket_sorting() function with random values."""
+    assert bucket_sorting(inputs) == sorted(inputs)
+
+
 @pytest.mark.parametrize('inputs, outputs',
-                         [(['s', 'b', 'h'], TypeError), ([4.5, 2.7, 1.7], ValueError)])
+                         [(['s', 'b', 'h'], TypeError),
+                          ([4.5, 2.7, 1.7], ValueError)])
 def test_negative_paths_without_crossing(inputs, outputs):
     """Tests for bucket_sorting() function with negative values."""
     with pytest.raises(outputs):
         bucket_sorting(inputs)
+
 
 def test_empty_paths_without_crossing():
     """Tests for bucket_sorting() function with empty values."""

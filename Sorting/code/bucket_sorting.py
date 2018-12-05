@@ -18,11 +18,14 @@ def bucket_sorting(lst: list):
     """
     buckets = list()
     result = list()
-    lst = list(map(int, lst.split()))
+    if isinstance(lst, str):
+        lst = list(map(int, lst.split()))
     for bucket in range(len(lst)):
         buckets.append(list())
     i = 1
     for item in lst:
+        if isinstance(item, float):
+            raise ValueError
         num_bucket = msBits(lst, item)
         if ([item] in buckets) and (lst.count(item) == len(lst)):
             buckets[num_bucket + i].append(item)
