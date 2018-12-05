@@ -11,8 +11,8 @@ def yakobstelelement(num):
             return int((2**num-(-1)**num)/3)
         print('Error. The values entered are to large.')
         return 'Error. The values entered are to large.'
-    print('Error. The values entered must be Positive integer.')
-    return 'Error. The values entered must be Positive integer.'
+    print('Error. The values entered must be positive integer.')
+    return 'Error. The values entered must be positive integer.'
 
 
 def descr():
