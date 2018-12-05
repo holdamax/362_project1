@@ -29,7 +29,7 @@ def find_combinations(post: int, color: int):
         diff = same * (color - 1)
         i = 3
         if post > 99 or color > 99:
-            return "sorry\n not\ntoday"
+            return "please, choose lesser numm"
         if post <= 0 or color <= 0:
             raise TypeError
 
