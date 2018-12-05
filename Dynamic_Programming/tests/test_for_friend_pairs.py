@@ -19,7 +19,7 @@ def test_itr(inputs, outputs):
                          [('-5', "You gave wrong input. Try again."),
                           ('five', "You gave wrong input. Try again."),
                           ('', "You gave wrong input. Try again.),
-                          (' ', "You gave wrong input. Try again.)])
+                          (' ', "You gave wrong input. Try again.)]))
 def test_itr(inputs, outputs):
     """Tests for negative results"""
     assert friend_pairs.itr(inputs) == outputs
