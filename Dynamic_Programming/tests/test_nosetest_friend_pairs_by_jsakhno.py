@@ -30,16 +30,16 @@ def test_strings_3():
 def test_strings_a():
     """testing func 'itr'(symbol 'a')"""
     print('test_strings_a  <============================ actual test code')
-    assert fp.itr('a') == None
+    assert fp.itr('a') == "You gave wrong input. Try again."
 
 @with_setup(my_setup_function, my_teardown_function)
 def test_strings_m4():
     """testing func 'itr'(number -4)"""
     print('test_strings_-4  <============================ actual test code')
-    assert fp.itr('-4') == None
+    assert fp.itr('-4') == "You gave wrong input. Try again."
 
 @with_setup(my_setup_function, my_teardown_function)
 def test_strings_sym():
     """testing func 'itr'(symbols '!@#$')"""
     print('test_strings_!@#$  <============================ actual test code')
-    assert fp.itr('!@#$') == None
+    assert fp.itr('!@#$') == "You gave wrong input. Try again."

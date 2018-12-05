@@ -17,7 +17,7 @@ def my_teardown_function():
 def test_numbers_3():
     """testing func 'longest_seq_with_diff_one'(symbols '')"""
     print('test_numbers_5  <============================ actual test code')
-    assert ls('') == 3
+    assert ls('') == "Please enter correct input."
 
 @with_setup(my_setup_function, my_teardown_function)
 def test_numbers_5():
@@ -36,10 +36,10 @@ def test_strings_0():
 def test_strings_a():
     """testing func 'longest_seq_with_diff_one'(symbols 'a')"""
     print('test_strings_3  <============================ actual test code')
-    assert ls('a') == None
+    assert ls('a') == "Please enter correct input."
 
 @with_setup(my_setup_function, my_teardown_function)
 def test_strings_m4():
     """testing func 'longest_seq_with_diff_one'(symbols '!@#$')"""
     print('test_strings_@#$  <============================ actual test code')
-    assert ls('@#$') == None
+    assert ls('@#$') == "Please enter correct input."
