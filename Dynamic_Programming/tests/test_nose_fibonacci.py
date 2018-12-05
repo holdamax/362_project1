@@ -3,7 +3,7 @@ Find which is the member of position n
  in Fibonacci sequence."""
 
 
-from fibonacci import fibord
+from Dynamic_Programming.code.fibonacci import fibord
 import nose
 
 
