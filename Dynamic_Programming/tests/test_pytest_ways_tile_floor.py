@@ -7,7 +7,11 @@ from Dynamic_Programming.code.ways_tile_floor import ways_tile_floor as wtf
 
 
 @pytest.mark.parametrize('input_1, input_2, output',
-                         [(10, 5, 8), (1, 1, 2), (0, 0, 0), (30, 3, 58425),
+                         [(10, 5, 8),
+                          (1, 1, 2),
+                          (999, 999, 2),
+                          (0, 0, 0),
+                          (30, 3, 58425),
                           (0, 10, 0)])
 def test_wtf_positive(input_1, input_2, output):
 
@@ -17,11 +21,14 @@ def test_wtf_positive(input_1, input_2, output):
     assert wtf(input_1, input_2) == output
 
 
-#@pytest.mark.xfail(raises=(IndexError, ValueError))
+# @pytest.mark.xfail(raises=(IndexError, ValueError))
 
 @pytest.mark.parametrize('input_1, input_2, output',
-                         [(-10, 2, IndexError), ('','',ValueError),
-                          ('*, ^, #, @, -, )', 5, ValueError)])
+                         [(-10, 2, IndexError),
+                          ('', '', ValueError),
+                          ('*, ^, #, @, -, )', 5, ValueError),
+                          (1000, 1000, ValueError),
+                          (1000, 1, ValueError)])
 def test_wtf_negative(input_1, input_2, output):
 
     """
