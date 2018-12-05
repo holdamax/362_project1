@@ -1,15 +1,13 @@
 #!/usr/bin/env python
 
-"""
-Count ways to find path without crossing.
+"""Count ways to find path without crossing.
 
 Take integer, even, positive number
 """
 
 
 def _factorial(num: int):
-    """
-    Count factorial from num.
+    """Count factorial from num.
 
     : Parameters
     ----------
@@ -29,7 +27,7 @@ def _factorial(num: int):
         print('Wrong type')
 
 
-def paths_without_crossing(num: int):
+def paths_without_crossing(num: (int, str)):
     """Count numbers of ways to connect num points on a circle.
 
     : Parameters
@@ -42,29 +40,16 @@ def paths_without_crossing(num: int):
         total number of ways to connect num points on a circle without crossing.
 
     """
-    #if num.isdigit():
     num = int(num)
     if num == 1:
         return 0
-    elif not (num % 2) and num >= 2:
+    if not (num % 2) and num >= 2:
         return _factorial(num) // (_factorial((num // 2 + 1)) * _factorial(num // 2))
     raise ValueError
-        # raise ValueError('Error! You entered wrong value')
-    # raise TypeError('Error! You entered wrong value')
 
 
 def descr():
-    """Expect input value from keyboard and call paths_without_crossing().
-
-    Input value
-    'q' - to return
-    int - to use paths_without_crossing()
-
-    :Returns:
-    int
-    None
-    """
-    # while True:
+    """Entry point function for the menu app."""
     inpt = input('\nPlease enter positive even number'
                  ' even and integer\n'
                  'Or \'q\' to back to the menu ... \n')
@@ -74,10 +59,9 @@ def descr():
     try:
         result = paths_without_crossing(inpt)
         print(result)
-    except AttributeError:
-        print('Error: Please enter an array')
         return None
-    except TypeError:
+    except (AttributeError, TypeError):
+        print('Error: Please enter an array')
         return None
     except ValueError:
         print('Error: Please enter only integer, even values bigger then 0')
