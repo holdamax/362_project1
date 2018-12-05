@@ -41,4 +41,3 @@ def ways_tile_floor(n_size, m_size):
         else:
             count[i] = 2
     return count[n_size]
-descr()
