@@ -33,7 +33,7 @@ import Dynamic_Programming.code.fibonacci_mod as f_mod
 #     """Test of calculating fibonacci number with different inputs."""
 #     assert f_mod.fibo(inputs) == outputs
 
-@pytest.mark.parametrize("inputs", [(0), (-1)])
+@pytest.mark.parametrize("inputs", [(46), (3000)])
 def test_fibo_negative(inputs):
     """Test of calculating fibonacci number with different inputs."""
     assert f_mod.fibo(inputs) is None
