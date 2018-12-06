@@ -25,7 +25,7 @@ def counting_sort(data):
 def descr():
     """Entry point function for the menu app."""
     while True:
-        data = input("Please type list of integers and i sort it:")
+        data = input("Please type list of integers and i sort it (e. g. 12, 1, 65, 4, 32, 55, 10):")
         if data == 'q':
             print("That's it.")
             return 'q'
