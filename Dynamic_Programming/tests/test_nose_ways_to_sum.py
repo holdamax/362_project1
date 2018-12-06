@@ -10,7 +10,9 @@ def test_func_positive():
 
 
 @nose.tools.timed(0.02)
+@nose.tools.raises( ValueError)
 def test_func_negative():
     """Test negative cases."""
-    nose.tools.assert_equals(ways_to_sum('1 2 3', 1.5), None)
-    nose.tools.assert_equals(ways_to_sum('1 2 3', 5), None)
+    nose.tools.raises(ways_to_sum('1 2 3', 5))
+    nose.tools.assert_equals(ways_to_sum('!, @, #', '%'), 15)
+    nose.tools.assert_equals(ways_to_sum('yaba-daba-dooooooo', 5))

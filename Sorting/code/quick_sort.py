@@ -4,10 +4,10 @@
 def descr():
     """Function for to input and verification data"""
     alist = input('Please enter list of numbers to sort like: 5, 4, 3, 2, 1 \n')
-    alist = list(map(int, alist.split(',')))
     if alist == 'q':
         return 'q'
     try:
+        alist = list(map(int, alist.split(',')))
         quicksort(alist)
         print("Sorted list looks like: {}".format(alist))
     except (TypeError, ValueError, IndexError):

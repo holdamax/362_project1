@@ -15,7 +15,7 @@ def descr():
     """Reading a numbers for searching count ways"""
     try:
         nam = input('What distance do you want to cover '
-                    'with 1, 2 and 3 steps.? n = ')
+                    'with 1, 2 and 3 steps? n = ')
         nam = nam.lower()
 
         if nam == 'q':

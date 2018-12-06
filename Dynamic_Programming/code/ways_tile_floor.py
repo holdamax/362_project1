@@ -13,7 +13,7 @@ def descr():
         print("All combinations: {}".format(ways_tile_floor(n_size, m_size)))
         return None
     except (TypeError, ValueError, IndexError):
-        print('Error! Please, enter correct size >= 0 (etc. 2 and 3)')
+        print('Error! Please, enter correct size >= 0 and < 1000 (etc. 2 and 3)')
 
 
 
@@ -25,9 +25,8 @@ def ways_tile_floor(n_size, m_size):
                 n_size -- n size floor
                 m_size m_size floor"""
     n_size = int(n_size)
-    if len(str(n_size)) > 3:
-        print('Sorry, number is too big. Please, enter number less than 3 characters')
-        return 0
+    if len(str(n_size)) > 3 or len(str(m_size)) > 3:
+        raise ValueError
     m_size = int(m_size)
     count = []
     for i in range(n_size + 2):
