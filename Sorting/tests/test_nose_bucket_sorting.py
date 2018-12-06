@@ -1,8 +1,8 @@
 """Testing task .
 Nose: Bucket sorting"""
-
-from Sorting.code.bucket_sorting import bucket_sorting
 import nose
+from Sorting.code.bucket_sorting import bucket_sorting
+
 
 @nose.tools.timed(0.02)
 def test_func():
@@ -15,17 +15,23 @@ def test_func_positive():
     nose.tools.assert_equals(bucket_sorting([1, 4, 6, 0, -1]), [-1, 0, 1, 4, 6])
     nose.tools.assert_equals(bucket_sorting([10, -2, 5]), [-2, 5, 10])
 
+
 @nose.tools.timed(0.02)
-def test_func_negative():
+@nose.tools.raises(ValueError)
+def test_func_negative4():
     """Test negative cases."""
-    nose.tools.assert_equals(bucket_sorting("fdvdfv"), None)
-    nose.tools.assert_equals(bucket_sorting("аррвсв"), None)
-    nose.tools.assert_equals(bucket_sorting(" "), None)
-    nose.tools.assert_equals(bucket_sorting(""), None)
+    nose.tools.raises(bucket_sorting("fdvdfv аррвсв"))
 
 
 @nose.tools.timed(0.02)
-@nose.tools.raises(IndexError, TypeError)
-def test_raises_type_error():
-    """Test of raising exception."""
-    raise TypeError('Please enter an array of integer numbers')
+@nose.tools.raises(AttributeError)
+def test_func_negative5():
+    """Test negative cases."""
+    nose.tools.raises(bucket_sorting(""))
+
+
+@nose.tools.timed(0.02)
+@nose.tools.raises(AttributeError)
+def test_func_negative6():
+    """Test negative cases."""
+    nose.tools.raises(bucket_sorting(" "))
