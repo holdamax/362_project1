@@ -12,12 +12,7 @@ def test_func_positive():
 
 def test_func_negative():
     """Test negative cases"""
-    assert ytl('-9') == 'Error. The values entered must be Positive integer.'
-    assert ytl('hey') == 'Error. The values entered must be integer!'
-    assert ytl('1001') == 'Error. The values entered is to large.'
-
-@nose.tools.raises(IndexError)
-def test_func_negative():
-    """Test raise cases"""
-    assert ytl('') == 'Error. The values entered must be integer.'
-
+    assert ytl('-9') == 'Error. The values entered must be positive integer.'
+    assert ytl('hey') == 'Error. The values entered must be positive integer.'
+    assert ytl('1001') == 'Error. The values entered are to large.'
+    assert ytl('') == 'Error. The values entered must be positive integer.'
