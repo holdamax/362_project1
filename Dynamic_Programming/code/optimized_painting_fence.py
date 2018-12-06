@@ -7,12 +7,15 @@ Please write first argument - number of posts, second argumet - number of colors
 
 
 def descr():
-    """Function for to input and verification data"""
-    posts = input('Please, input number of posts: ')
-    colors = input('Please, input number of colors: ')
-    if posts == 'q' or colors == 'q':
-        return 'q'
-    print(find_combinations(posts, colors))
+    """
+    Function for to input and verification data
+    """
+    while True:
+        posts = input('Please, input number of posts: ')
+        colors = input('Please, input number of colors: ')
+        if posts == 'q' or colors == 'q':
+            return 'q'
+        print(find_combinations(posts, colors))
 
 
 def find_combinations(post: int, color: int):
@@ -52,4 +55,3 @@ def find_combinations(post: int, color: int):
 if __name__ == '__main__':
 
     descr()
-
