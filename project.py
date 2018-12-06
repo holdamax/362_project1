@@ -1,9 +1,9 @@
 """Main project module"""
 
 import os
-
 from Dynamic_Programming.code import *
 from Sorting.code import *
+
 
 TASKS = {'1': fibonacci,
          '2': fibonacci_mod,
