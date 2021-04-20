@@ -20,7 +20,7 @@ parso==0.3.0
 pickleshare==0.7.4
 pluggy==0.8.0
 prompt-toolkit==1.0.15
-py==1.7.0
+py==1.10.0
 Pygments==2.2.0
 pylint==2.2.0
 pytest==4.0.1
